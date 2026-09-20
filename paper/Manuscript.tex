@@ -1,0 +1,272 @@
+\documentclass[preprint,12pt]{elsarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,graphicx,booktabs,tabularx,array}
+\usepackage[margin=25mm]{geometry}
+\usepackage{url}
+\journal{Sensors and Actuators A: Physical}
+\begin{document}
+\begin{frontmatter}
+\title{Magnetic spatial encoding for submillimetre localization and three dimensional contact tracking with a five node soft tactile sensor}
+\author{[Author names and affiliations to be inserted]}
+\begin{abstract}
+Soft magnetic tactile sensors require spatially distinguishable responses to localize contact with few readout nodes. We compare concentric alternating-polarity discs, a checkerboard disc array and a parallel-stripe magnetic sheet in four structural configurations using five triaxial Hall sensors over a 20 \ensuremath{\times} 20 mm region. The checkerboard configuration provides the lowest unseen-position error and the most consistent response direction across indentation depths. A normalized magnetic response map combines continuous radial basis function localization with shape-dependent indentation estimation. On an independent repeated indentation record excluded from fitting, dense calibration yields a mean planar error of 0.288 mm and X, Y and Z mean absolute errors of 0.163, 0.206 and 0.031 mm. Discrete localization at calibrated nodes yields a separate mean error of 0.073 mm. Static position and indentation results are compared with corresponding magnetic tactile sensing benchmarks. Increasing calibration density from 2 to 1 mm reduces planar error by 17.5\% on the same test contacts. Independent motion experiments give planar errors of 0.510 mm for a working-domain cross scan, 0.453 mm for an eight-direction scan and 0.407 mm during movement along a segmented circular path. Two executions of a simultaneous XYZ trajectory yield mean three-dimensional errors of 0.564 and 0.574 mm with 99.91\% combined output coverage. These results connect magnetic spatial encoding and calibration density to submillimetre static localization and repeatable three-dimensional contact tracking.
+\end{abstract}
+\begin{keyword}
+soft tactile sensor; magnetic spatial encoding; Hall sensor array; contact localization; radial basis regression; three dimensional trajectory
+\end{keyword}
+\end{frontmatter}
+\section{Introduction}
+
+Soft tactile sensing can provide the location and movement of contact while allowing a compliant interface to accommodate the contacting object. Magnetic sensing separates the deformable magnetic layer from the readout electronics. This arrangement is attractive for small robotic contact surfaces, but accurate localization depends on how deformation changes the field across the available sensing channels. A large response does not necessarily imply a distinctive response: different positions or indentation depths may produce similar magnetic measurements.
+
+The physical design of magnetic tactile sensors has therefore received substantial attention. Wang et al. [1] formulated a design methodology relating the magnetic source, field gradient, compliant structure and calibration of a triaxial sensor. Hellebrekers et al. [2] demonstrated continuous position and force estimation from soft magnetic skin using neural networks. Their magnetic silicone specimen yielded X, Y and Z mean absolute errors of 1.15, 1.16 and 0.25 mm over a 40 \ensuremath{\times} 40 mm area. Yan et al. [3] used a periodically magnetized film for force decoupling and high-resolution contact localization, reporting axis-wise position errors of approximately 0.09 and 0.11 mm over an 18 \ensuremath{\times} 18 mm region. Hu et al. [4] combined interpolated magnetic response maps and learned decoding for large-area tactile perception, reporting an average localization error of about 1.2 mm over 220 \ensuremath{\times} 220 mm. These studies establish that a limited number of magnetic sensing elements can encode contact positions much more finely than their physical spacing.
+
+ReSkin [5] and AnySkin [6] further address replaceable interfaces and variation between sensor instances. Their results motivate explicit consideration of mounting conditions and calibration reuse. However, material compliance also introduces a distinction between a steady indentation map and a continuously moving contact. A mapping that accurately reconstructs repeated static contacts may encounter shear, relaxation and history-dependent responses during sliding. Static localization and motion tracking consequently require separate experimental evidence.
+
+We investigate this relationship using a common five-node readout and three magnetic layouts. The contribution is an experimentally supported combination of magnetic spatial encoding, dense calibration and working-domain decoding, rather than a claim that normalization or kernel regression is new. First, a matched spatial holdout experiment compares four structural configurations and relates their localization performance to weak-direction sensitivity and cross-depth response consistency. Second, an independent repeated indentation record quantifies the benefit of 1 mm calibration relative to a 2 mm subset. Third, independently recorded cross, radial, circular and simultaneous XYZ motions test the resulting contact-tracking capability. The static continuous result is 0.288 mm mean planar error, with 0.031 mm indentation MAE; these values are presented alongside static literature results, while the dynamic tests quantify the additional demands of moving contact.
+
+\section{Sensor and experimental protocol}
+
+\subsection{Magnetic layouts and readout geometry}
+
+The sensor uses five MLX90393 triaxial magnetic nodes, giving 15 magnetic channels. Relative to the centre of the four outer nodes, their planar coordinates are (-7.594, +7.594), (-7.594, -7.594), (+7.594, +7.594), (+7.594, -7.594) and (0, +1.406) mm. The composite specimen footprint is 46 \ensuremath{\times} 56 mm; experiments evaluate a central 20 \ensuremath{\times} 20 mm region. The intermediate compliant layer is silicone. [INSERT VERIFIED SILICONE GRADE, MIXING RATIO, HARDNESS AND CURING CONDITIONS.] These fabrication details must describe the specimens actually tested.
+
+The concentric alternating-polarity array (CCA) comprises 19 discs, each nominally 4 mm in diameter and 1 mm thick, arranged as a centre disc and rings of six and twelve discs at radii of 5 and 10 mm. The checkerboard alternating-polarity array (CPA) comprises 25 discs of nominal diameter 5 mm and thickness 1 mm, with 5 mm centre spacing. The parallel-stripe magnetized sheet (PSM) has ten alternating stripes and a nominal thickness of 1 mm. PSM-L and PSM-H denote nominal silicone isolation thicknesses of 2.5 and 4.5 mm, respectively. These dimensions describe isolation layers, not independently measured distances to the Hall-sensitive elements. CCA and CPA use the nominal 4.5 mm isolation configuration. Figure 1 shows the layouts and readout positions; photographs and an assembly drawing accompany the supplementary material.
+
+\begin{center}
+\includegraphics[width=\linewidth,height=.47\textheight,keepaspectratio]{figures/Fig1_geometry.png}
+\end{center}
+
+Figure 1. Magnetic layouts and common five-node readout. Red and blue indicate nominal reference-face polarity, not field strength. Disc positions are nominal; the stripe drawing is schematic and does not specify a measured pole pitch. The dashed square marks the 20 \ensuremath{\times} 20 mm evaluation region.
+
+A brass conical indenter contacts the silicone directly. Its measured contact-end diameter is 1 mm and its confirmed outer diameter is 4 mm. The mounting thread is M6 \ensuremath{\times} 1. The dimensioned source drawing specifies a total length of 13 mm, an 8 mm tip-to-thread-start distance and a 6 mm hexagonal width. The indenter axis defines the contact position; its contact patch can increase during indentation. No force is inferred from indentation without a separate force calibration.
+
+\subsection{Coordinates and contact sampling}
+
+A motorized printer stage supplies controlled contact motion. With mounting centre (Xc, Yc), reference contact height Zc and stage coordinates (Xp, Yp, Zp), we define:
+
+\[\mathbf{q}=(x,y,z)^T=(X_p-X_c,\ Y_p-Y_c,\ Z_c-Z_p)^T.\qquad (1)\]
+
+Positive z denotes indentation. Static labels use the commanded indentation recorded in the contact events and the initialized contact reference. A 2 mm grid contains 121 locations and a 1 mm grid contains 441 locations. These are calibration locations, not physical sensor counts. At each location, the indenter approaches without contact, establishes a local unloaded baseline, indents, holds and retracts. One physical contact produces one 15-channel steady sample. Continuous magnetic streams and motion events are retained separately.
+
+The per-channel median between 180 and 20 ms before indentation defines the baseline B0. The median in the corresponding final 180--20 ms interval of the hold defines the loaded sample. Contacts without adequate valid baseline or hold data are not converted into calibration samples. Grouping samples by physical contact prevents adjacent frames from a single hold from being treated as independent repetitions. Figure 2 summarizes the protocol.
+
+\begin{center}
+\includegraphics[width=\linewidth,height=.47\textheight,keepaspectratio]{figures/Fig2_protocol.png}
+\end{center}
+
+Figure 2. Dense calibration, source grouping and independent evaluation. The same 1 mm acquisition supplies the 2 mm subset and the dense map. Entire physical contacts or records are separated for evaluation; only five triaxial nodes are used throughout.
+
+\subsection{Evaluation datasets}
+
+For the configuration comparison, each specimen has 121 locations, three indentation depths of 0.2, 0.5 and 0.8 mm and two repetitions, giving 726 contacts per configuration. Thirty-six 4 mm-spaced locations support fitting and parameter selection; all repetitions and depths at the other 85 locations remain outside fitting, giving 510 unseen-position test contacts per configuration. Full-grid deployment models are fitted only after this spatial evaluation.
+
+For the CPA density comparison, a common pool contains 1322 valid contacts at depths of 0.3, 0.4 and 0.6 mm. One contact lacks a usable baseline. A separate complete 441-location record at 0.4 mm is reserved for evaluation. The test locations can coincide with calibration nodes, but the physical contacts are different and the whole record is excluded from fitting. Frozen model files and contact identifiers permit this separation to be checked. The sparse model uses the 2 mm subset of that same training pool; the dense model uses all available 1 mm locations. Historical deployment models and their additional training contacts are documented separately and are not substituted for these frozen models.
+
+Dynamic evaluation uses later motion records with completed actions and valid initialization. Each operating condition is reported separately. A review of 39 records identifies one aborted record, five raw-fingerprint calibration experiments and two records with incorrect initialization; these are not pooled into the main tracking results. The remaining records are retained in the accompanying audit, including conditions with reduced output coverage. Representative trajectories illustrate successful operating conditions, rather than an average over incompatible models and motion ranges.
+
+Position references are reconstructed from recorded stage commands, action timestamps and estimated segment durations. They therefore measure agreement with the commanded motion reference, not independently measured contact-patch kinematics. Repetition evaluates the response to the same controlled external action. Reported trajectories retain the recorded coordinate calibration and are not realigned after observing test errors. Supplementary Table S2 defines the records behind each result.
+
+\section{Magnetic response maps and decoding}
+
+\subsection{Normalized spatial mapping}
+
+Concatenating the five triaxial readings gives B. We separate the baseline-corrected response into amplitude A and a unit response vector u:
+
+\[\Delta\mathbf{B}=\mathbf{B}-\mathbf{B}_0,\quad A=\Vert\Delta\mathbf{B}\Vert_2,\quad\mathbf{u}=\frac{\Delta\mathbf{B}}{\max(A,\varepsilon)}.\qquad (2)\]
+
+Amplitude is measured in microtesla; u is dimensionless. Normalization reduces changes caused by a common amplitude scale while retaining the relative response across channels. It does not assume exact separation of depth and position. Each calibrated location supplies a normalized response centre cj. For the frozen density experiment, unit vectors are averaged within a location and the resulting mean is normalized again.
+
+We use regularized Gaussian radial basis function regression. With M centres and their planar coordinates arranged in P, the model is:
+
+\[K_{ij}=\exp(-\gamma\Vert\mathbf{c}_i-\mathbf{c}_j\Vert_2^2),\quad\mathbf{W}_{xy}=(\mathbf{K}+\lambda_{xy}\mathbf{I})^{-1}\mathbf{P}.\qquad (3)\]
+
+\[\widehat{\mathbf{p}}(\mathbf{u})=\sum_{j=1}^{M}\exp(-\gamma\Vert\mathbf{u}-\mathbf{c}_j\Vert_2^2)\mathbf{w}_j.\qquad (4)\]
+
+The prediction is continuous and is not snapped to a calibration node. We call the 2 mm subset model SC-RBF and the dense 1 mm model DC-RBF. These abbreviations describe calibration strategies, not different magnetic structures.
+
+\subsection{Shape-dependent indentation estimation}
+
+The indentation branch uses amplitude together with spatial response shape. For the dense model, L is the natural logarithm of amplitude clipped below at 10 to the power -6 microtesla, and the 32-dimensional feature vector is:
+
+\[\boldsymbol{\phi}=[\mathbf{u}^T,L,L^2,(L\mathbf{u})^T]^T.\qquad (5)\]
+
+Features are standardized using training means and standard deviations. A constant is appended as the last column of T. Ridge regression gives:
+
+\[\boldsymbol{\beta}=(\mathbf{T}^T\mathbf{T}+\lambda_z\mathbf{D})^{-1}\mathbf{T}^T\mathbf{z},\quad\widehat{z}=\mathbf{t}(\boldsymbol{\phi})^T\boldsymbol{\beta}.\qquad (6)\]
+
+D penalizes the feature coefficients but not the intercept. The interaction terms allow the amplitude-to-depth relation to vary with response shape. The sparse frozen model uses the raw 15-channel response with L and L squared instead. Full feature definitions, coefficients and normalization statistics are included with the executable models.
+
+\begin{center}\small
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+Model & Centres & XY gamma & XY penalty & Z feature & Z penalty \\
+\midrule
+Frozen SC-RBF & 121 & 2 & 0.001 & Raw response and log amplitude & 0.1 \\
+Frozen DC-RBF & 441 & 4 & 0.001 & Unit response and log interaction & 0.001 \\
+Working-domain WD-RBF & 441 & 8 & 0.001 & Unit response and log interaction & 0.001 \\
+\bottomrule
+\end{tabularx}\end{center}
+
+Table 1. Parameters of the frozen density comparison and working-domain deployment model. The latter uses 0.4 and 0.6 mm training depths and is evaluated on separate motion records. It is not used to claim independence on the reserved static record.
+
+A discrete prototype localizer (DPL) is retained for applications where the desired output is a calibrated node. It selects the node with the largest cosine similarity to any of its stored templates. A local linear amplitude-to-depth relation supplies indentation. Its mean planar error is evaluated on the same reserved contacts, but its historical training pool is different; it is a distinct output-task benchmark, not a controlled density ablation.
+
+\subsection{Working domain and mounting registration}
+
+The working-domain model WD-RBF targets 0.4--0.6 mm indentation using the two corresponding dense calibration levels. Its deployed response-amplitude threshold is 291.732 microtesla and its cosine-similarity threshold is 0.985322. Because response sensitivity varies spatially, an amplitude threshold is not a universal geometrical depth threshold. The model is intended for reliably engaged contact rather than the earliest detectable surface deformation.
+
+After mounting, five known planar contact positions, comprising the centre and four surrounding directions, support rigid registration. Steady-hold median predictions pi are matched to commanded positions qi. The fitted proper rotation R and translation t minimize their summed squared planar discrepancies, subject to orthonormal R and determinant +1. This registration corrects global translation and rotation without changing z. Holding samples, rather than transient entry or release tails, define each calibration point. The transform is fixed before the evaluated motion. Raw-response fingerprint registration is not used as a validated component of the results reported here.
+
+During operation, the magnetic stream is decoded causally and rejected samples remain invalid. Release terminates a trajectory segment; it does not connect the path to the coordinate origin. Display smoothing and edge suppression are distinct from the recorded predictions used for quantitative analysis.
+
+\subsection{Causal working-domain decoder}
+
+An additional working-domain decoder, WD-Causal, is evaluated for radial and circular movement. Its base XY mapping uses standardized shape--amplitude features and its base Z mapping uses the raw magnetic difference. Gaussian kernel ridge regression supplies the initial coordinate q0. XY training includes the 0.2 mm level as auxiliary spatial data; Z training targets the 0.5 and 0.8 mm levels. This decoder has a different source pool from the 0.4--0.6 mm dense working-domain model.
+
+A 34-dimensional feature vt concatenates the current response divided by the training amplitude median, the unit response, log(1 + A), and q0. Past observations at delays of 0.10, 0.25 and 0.50 s form the causal history:
+
+\[\mathbf{h}_t=[\mathbf{v}_t,\mathbf{v}_t-\mathbf{v}_{t-0.10},\mathbf{v}_t-\mathbf{v}_{t-0.25},\mathbf{v}_t-\mathbf{v}_{t-0.50}].\qquad (7)\]
+
+\[\widehat{\mathbf{q}}_t=\widehat{\mathbf{q}}_t^0+g_t\mathbf{W}_h^T[1;\widetilde{\mathbf{h}}_t].\qquad (8)\]
+
+The 136 history features are standardized, and ridge regression with penalty 0.01 learns a residual from nine earlier motion records. The gate g is activated by short-delay normalized magnetic change and decays with a 1.2 s time constant. Gaps exceeding 250 ms reset the history. All lagged observations precede or coincide with their requested historical times. The evaluated radial and circular records are not used for this fitting. Supplementary material gives the gate rule and complete coefficients. These tests establish performance of the complete decoder; they do not isolate the causal contribution through a paired base-versus-history ablation on the new trajectories.
+
+\subsection{Error and spatial distinguishability}
+
+Planar and three-dimensional errors are mean Euclidean distances to the reference; axis-wise errors are mean absolute errors. Output coverage is the fraction of eligible motion samples with valid predictions. Error and coverage are reported together. A 50 ms start guard is used for ordinary motion segments. Circular paths use 128 short linear segments with host-side waiting; their approximately 49 ms short movements cannot use that guard. Circular movement-only and complete-contact intervals are therefore evaluated separately.
+
+To study spatial encoding, finite differences on the 2 mm response map estimate the planar Jacobian Ju. Repetition differences divided by the square root of two estimate a response covariance S. With 10\% isotropic shrinkage, we compute:
+
+\[\boldsymbol{\Sigma}=0.9\mathbf{S}+0.1\frac{\mathrm{tr}(\mathbf{S})}{15}\mathbf{I},\quad\mathbf{G}=\mathbf{J}_u^T\boldsymbol{\Sigma}^{-1}\mathbf{J}_u.\qquad (9)\]
+
+The square root of the smaller eigenvalue of G measures the weaker spatial direction relative to repeated-contact variability. The covariance includes mechanical and contact variation; it is not purely electronic noise. These quantities provide empirical explanations within the measured configurations rather than a universal magnetic-field optimum.
+
+\section{Results}
+
+\subsection{Configuration comparison}
+
+The CPA configuration achieves the lowest mean position and indentation errors on the matched unseen-position test (Table 2). Each row contains 510 contacts, with all depths and repetitions at a test location withheld together.
+
+\begin{center}\small
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+Configuration & Planar mean error mm & Planar P95 mm & Z MAE mm \\
+\midrule
+CCA & 0.714 & 1.611 & 0.0634 \\
+CPA & 0.534 & 1.505 & 0.0575 \\
+PSM-L & 0.930 & 2.124 & 0.0897 \\
+PSM-H & 1.189 & 2.994 & 0.0864 \\
+\bottomrule
+\end{tabularx}\end{center}
+
+Table 2. Spatial holdout performance using 36 fitting locations and 85 unseen locations per configuration.
+
+CPA does not have the largest median whitened gradient. It instead combines the highest tenth-percentile weak-direction gradient, 6.50 per mm, with the lowest median local condition number, 1.57, and the highest median cross-depth shape cosine, 0.99966. The corresponding weak-direction tenth percentiles are 4.33, 5.90 and 4.74 per mm for CCA, PSM-L and PSM-H. These results suggest that limiting weakly distinguishable regions matters more than maximizing mean response alone. For the stripe configurations, median amplitude--indentation slopes decrease from approximately 1040 to 520 microtesla per mm as nominal isolation increases from 2.5 to 4.5 mm. Figure 3 summarizes the accuracy and weak-direction comparison. Geometry, dimensions and assembly all contribute to these configuration differences.
+
+\begin{center}
+\includegraphics[width=\linewidth,height=.47\textheight,keepaspectratio]{figures/Fig3_static_results.png}
+\end{center}
+
+Figure 3. Configuration-level spatial holdout errors and weak-direction sensitivity, followed by the CPA calibration-density comparison on the same 441 reserved contacts. The discrete-node benchmark has a different output task and source pool and is reported separately in the text.
+
+\subsection{Dense static localization}
+
+On the complete reserved repeat record, DC-RBF yields a mean planar error of 0.288 mm, planar RMSE of 0.380 mm and planar P95 of 0.790 mm. X, Y and Z MAEs are 0.163, 0.206 and 0.0315 mm. SC-RBF yields a planar mean error of 0.349 mm and Z MAE of 0.0337 mm. Dense calibration therefore reduces the planar mean error by 17.5\%. All 441 contacts are included for both models.
+
+For calibrated-node output, DPL identifies 412 of the 441 nodes correctly, or 93.42\%, and gives a mean planar node error of 0.0731 mm. This error describes selecting known nodes; it is not a claim of 0.0731 mm continuous spatial resolution. The continuous and discrete results serve different application requirements.
+
+Table 3 places the static results beside corresponding static literature metrics. The continuous errors here are numerically lower than the larger-area magnetic silicone result [2], while the axis-wise position errors remain above those reported by Yan et al. [3]. The comparison shows submillimetre continuous localization with five sensing nodes, without equating different specimen areas, training protocols or indentation ranges. A force error is not converted into an indentation error.
+
+\begin{center}\small
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+Study and task & Area mm \ensuremath{\times} mm & Static position result mm & Static indentation result mm \\
+\midrule
+Hellebrekers et al. [2], silicone XYZ regression & 40 \ensuremath{\times} 40 & X/Y MAE 1.15 / 1.16 & Z MAE 0.25 \\
+Yan et al. [3], dense localization & 18 \ensuremath{\times} 18 & Fivefold X/Y MAE 0.09 / 0.11 & Depth calibration present; no matched Z MAE used here \\
+Hu et al. [4], large-area localization & 220 \ensuremath{\times} 220 & Mean localization error about 1.2 & Force metrics not converted to displacement \\
+This work, reserved-repeat continuous regression & 20 \ensuremath{\times} 20 & X/Y MAE 0.163 / 0.206; planar 0.288 & Z MAE 0.0315 \\
+\bottomrule
+\end{tabularx}\end{center}
+
+Table 3. Static-to-static comparison. The published quantities retain their task and metric definitions. The reserved-repeat result in this work is not an unseen-position test; the separate spatial holdout is given in Table 2.
+
+Yan et al. acquired 40,500 samples at 0.2 mm spatial spacing and five indentation depths using nine triaxial taxels [3]. Our density experiment uses 1322 training contacts at 1 mm spacing with five nodes, followed by 441 reserved contacts. Thus the comparison also involves different calibration budgets and sampling strategies, rather than only a difference between reported errors.
+
+\subsection{Independent cross and simultaneous XYZ motion}
+
+At a commanded depth of 0.6 mm and a cross-scan extent of 6 mm, WD-RBF achieves a planar mean error of 0.510 mm, P95 of 0.964 mm, Z MAE of 0.0789 mm and coverage of 97.44\%. The corresponding SC-RBF record gives 0.855 mm planar error and 0.0498 mm Z MAE. The working-domain configuration improves planar tracking in this condition with an approximately 0.029 mm increase in depth error. Each configuration has one complete record here, so this is a deployment comparison rather than a repeated paired algorithm study.
+
+Simultaneous XYZ movement provides a stronger test than constant-depth sliding. For a commanded increment of (+8, -8, +1.2) mm, two executions yield three-dimensional mean errors of 0.564 and 0.574 mm. Their combined result is 0.569 mm, with planar error of 0.561 mm, Z MAE of 0.0725 mm and 1091 valid predictions from 1092 eligible samples. The Z-reference correlations are 0.99830 and 0.99847. At common command progress, the mean between-repeat differences are 0.365 mm in XY and 0.0131 mm in Z. Figure 4 presents both executions without retrospective spatial realignment.
+
+\begin{center}
+\includegraphics[width=\linewidth,height=.47\textheight,keepaspectratio]{figures/Fig4_xyz.png}
+\end{center}
+
+Figure 4. Independently recorded XYZ contact movement and axis-wise time series for two executions. Dashed curves are command-derived stage references. Solid curves are recorded valid predictions after the previously established mounting registration. Time is relative to the start of each execution.
+
+Additional increments of (-4, +4, +1.2), (-8, +8, +1.4) and (-6, +6, +1.0) mm give three-dimensional mean errors of 0.623, 0.695 and 0.585 mm, respectively, at 100\% coverage. The last is illustrated in Video S2. These direction-specific tests extend beyond the static map's highest 0.8 mm calibration level, but do not establish uniform performance to 1.4 mm at every location. Other directions produce substantial similarity-based rejection; their coverage and error are retained in the supplementary audit. Tracking successful three-axis trajectories is not equivalent to reconstructing an entire deforming surface or simultaneous multiple contacts.
+
+\subsection{Radial and circular contact trajectories}
+
+WD-Causal gives a planar error of 0.453 mm and Z MAE of 0.0556 mm during an eight-direction outward-and-return scan of radius 4 mm, with full coverage. The two executions give planar errors of 0.466 and 0.440 mm, and their mean planar prediction difference at common progress is 0.174 mm. This experiment tests direction changes across the same contact region.
+
+For a segmented circle of radius 2 mm, movement-only planar error is 0.407 mm and Z MAE is 0.0485 mm, with full coverage. Including inter-segment holds gives a planar error of 0.390 mm. The two movement-only repetitions give 0.381 and 0.434 mm. At radius 4 mm, movement-only and full-contact planar errors are 0.772 and 0.752 mm, respectively, also with full coverage. The greater error at the larger radius identifies a useful operating-range distinction without changing the response model after observing the test.
+
+\begin{center}
+\includegraphics[width=\linewidth,height=.47\textheight,keepaspectratio]{figures/Fig5_radial_circle.png}
+\end{center}
+
+Figure 5. Eight-direction radial movement and a segmented circular path decoded by WD-Causal. Blue and red show two executions; dashed black shows the command-derived reference. Missing output intervals are not bridged. The circle panel includes inter-segment holds, corresponding to 0.390 mm planar error; the movement-only value is 0.407 mm.
+
+Each circle comprises 128 linear segments. Although the nominal segment speed is 2 mm/s, host-side waiting lowers the complete-path average speeds to approximately 0.322 and 0.556 mm/s for radii of 2 and 4 mm. These experiments demonstrate repeated circular contact tracking under the recorded timing, not constant-speed circular motion at 2 mm/s. Their absolute errors are calculated relative to the original command centre, not a circle fitted to the predicted trajectory.
+
+\section{Discussion}
+
+The configuration study indicates that stable spatial response structure is a useful design criterion for soft magnetic localization. The derivative of a normalized magnetic response makes the relevant trade-off explicit:
+
+\[\frac{\partial\mathbf{u}}{\partial q_k}=\frac{\mathbf{I}-\mathbf{u}\mathbf{u}^T}{A}\frac{\partial\Delta\mathbf{B}}{\partial q_k}.\qquad (10)\]
+
+Normalization removes changes parallel to the current response direction, but the division by amplitude can amplify perturbations at weak contact. A suitable operating domain must therefore accompany normalized decoding. The empirical result for CPA is consistent with its stronger low-percentile spatial distinguishability and cross-depth stability. It does not imply that a checkerboard is universally optimal across different magnet sizes, elastomers or sensing geometries.
+
+High-density calibration improves repeated-contact localization without increasing the number of electronic nodes. The 17.5\% planar improvement compares a common source acquisition and an identical reserved test record. This directly separates the calibration-density benefit from remounting or session changes. For tasks requiring stable categorical contact regions, node classification is also useful, but its 0.073 mm node error should remain distinct from continuous-coordinate accuracy.
+
+The independent motion experiments show that static magnetic maps contain information about simultaneous planar movement and indentation. A planar error of 0.288 mm at a held contact and a three-dimensional error of 0.569 mm on a moving XYZ path describe different operating conditions. The gap can include viscoelastic response, shear, mounting and command-reference timing. Fixing the magnetic structure should reduce one source of variability, but these data do not establish that doing so would automatically make dynamic error equal to static error. The causal decoder supplies one practical route to represent history, while its separate contribution requires matched ablation on the same independent motion inputs.
+
+Repetition under the same controlled external action is valuable evidence of response consistency. It does not require an additional displacement instrument during normal sensor use. The present command-derived reference and repeatability measurements are appropriate to the reported reconstruction task. Additional metrology would be useful specifically to separate stage tracking, changing contact-patch geometry and deformation errors; it is not presented as a component required for deployment. Likewise, repeated frames within a trajectory are not independent specimen replicates. The current study evaluates the measured configurations and selected operating conditions, not manufacturing variability across a population of sensors.
+
+\section{Conclusions}
+
+A five-node magnetic tactile sensor supports submillimetre static contact localization and independently recorded three-axis contact tracking through spatial response mapping. Among four measured configurations, the checkerboard array combines the lowest unseen-position error with favourable weak-direction distinguishability and cross-depth consistency. Dense calibration gives 0.288 mm mean planar error and 0.0315 mm indentation MAE on a reserved repeated-contact record, improving planar accuracy by 17.5\% over a same-source sparse subset. Independent radial and segmented circular movements yield 0.453 and 0.407 mm movement-only planar errors with the causal working-domain decoder. Two executions of a representative XYZ movement yield 0.564 and 0.574 mm three-dimensional errors. The results support a design strategy that combines stable magnetic spatial encoding, sufficient calibration density and explicitly defined contact operating conditions.
+
+\section{Data availability}
+
+An offline reproducibility package containing frozen static models, contact-level calibration and test data, recorded dynamic predictions, command-derived references and analysis scripts has been prepared for deposit at https://github.com/googo2025/MagTouch-RA-3d-trajectory-recon. [INSERT VERIFIED PUBLIC RELEASE TAG AND ARCHIVAL DOI AFTER DEPOSIT.] The compact dynamic package reproduces recorded-output metrics; it does not contain every original magnetic time stream.
+
+\section{Declarations}
+
+Funding: [INSERT VERIFIED FUNDING INFORMATION OR CONFIRM NO EXTERNAL FUNDING.]
+
+Competing interests: [AUTHORS TO CONFIRM DECLARATION.]
+
+CRediT author contributions: [INSERT AUTHOR NAMES AND APPROVED CONTRIBUTIONS.]
+
+Declaration of generative AI and AI-assisted technologies in manuscript preparation: During preparation of this work, the authors used OpenAI Codex for assistance with code development, data analysis and manuscript drafting. [AUTHORS TO REVIEW, CONFIRM THE ACTUAL SCOPE OF USE AND ACCEPT RESPONSIBILITY FOR THE FINAL CONTENT.]
+
+\section{References}
+
+[1] H. Wang, G. de Boer, J. Kow, A. Alazmani, M. Ghajari, R. Hewson, P. Culmer, Design Methodology for Magnetic Field-Based Soft Tri-Axis Tactile Sensors, Sensors 16 (2016) 1356. https://doi.org/10.3390/s16091356.
+
+[2] T. Hellebrekers, N. Chang, K. Chin, M.J. Ford, O. Kroemer, C. Majidi, Soft Magnetic Tactile Skin for Continuous Force and Location Estimation Using Neural Networks, IEEE Robotics and Automation Letters 5 (2020) 3892--3898. https://doi.org/10.1109/LRA.2020.2983707.
+
+[3] Y. Yan, Z. Hu, Z. Yang, W. Yuan, C. Song, J. Pan, Y. Shen, Soft magnetic skin for super-resolution tactile sensing with force self-decoupling, Science Robotics 6 (2021) eabc8801. https://doi.org/10.1126/scirobotics.abc8801.
+
+[4] H. Hu et al., Large-area magnetic skin for multi-point and multi-scale tactile sensing with super-resolution, npj Flexible Electronics 8 (2024) 42. https://doi.org/10.1038/s41528-024-00325-z.
+
+[5] R. Bhirangi, T. Hellebrekers, C. Majidi, A. Gupta, ReSkin: versatile, replaceable, lasting tactile skins, Proceedings of Machine Learning Research 164 (2022) 587--597. https://proceedings.mlr.press/v164/bhirangi22a.html.
+
+[6] R. Bhirangi, V. Pattabiraman, E. Erciyes, Y. Cao, T. Hellebrekers, L. Pinto, AnySkin: Plug-and-play Skin Sensing for Robotic Touch, arXiv (2024) 2409.08276. https://doi.org/10.48550/arXiv.2409.08276.
+
+\end{document}
