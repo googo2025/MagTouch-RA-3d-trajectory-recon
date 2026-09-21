@@ -1,0 +1,14 @@
+metric,old_not_seated,new_repressed,unit_or_note
+response_amplitude_median,1023.900,326.694,uT_15D_deltaB
+hold_noise_rms_median,32.207,28.148,uT
+hold_noise_over_response_median,3.176,8.474,percent
+magnitude_fall_90_to_10_valid,2/126,126/126,contacts
+magnitude_fall_90_to_10_median,777.689,149.386,ms_valid_only
+magnitude_end_residual_median,16.566,6.436,percent_of_steady
+component_release_mean_median,29.830,16.245,percent_of_steady
+repeat_angle_median,1.715,3.825,degree
+repeat_split_raw_exact_accuracy,96.825,90.476,percent_63_nodes
+repeat_split_raw_xy_mae,0.032,0.099,mm_same_trial_repeat_test
+baseline_15D_shift_old_to_new,,5515.295,uT
+paired_response_direction_change,,16.604,degree_median
+new_over_old_response_amplitude,,0.3385,ratio_median

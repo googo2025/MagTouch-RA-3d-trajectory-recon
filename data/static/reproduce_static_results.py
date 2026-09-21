@@ -65,4 +65,15 @@ scores=np.column_stack([(tu@np.array(bank).T).max(axis=1) for bank in p['unit_te
 j=scores.argmax(axis=1);xy=nodes[j];z=(np.linalg.norm(td,axis=1)-cal[j,1])/np.maximum(cal[j,0],1e-9)
 print(json.dumps({'model':'DPL','test_contacts':len(td),'correct_nodes':int(np.all(xy==txy,axis=1).sum()),
     'xy_mae_mm':float(np.linalg.norm(xy-txy,axis=1).mean()),'z_mae_mm':float(np.abs(z-tz).mean())},ensure_ascii=False))
+retest=json.loads((ROOT/'retest_response_summary.json').read_text(encoding='utf-8'))
+t153={(float(r['x']),float(r['y'])):np.array(r['delta'],float) for r in fixture['training_pool'] if '000153' in r['trial']}
+t154={(float(r['x']),float(r['y'])):np.array(r['delta'],float) for r in fixture['test_contacts']}
+keys=sorted(t153.keys()&t154.keys());cos=[];relative=[]
+for key in keys:
+    a=t153[key];b=t154[key];na=np.linalg.norm(a);nb=np.linalg.norm(b)
+    cos.append(float(a@b/(na*nb)));relative.append(float((nb-na)/na))
+assert len(keys)==retest['matched_coordinates']==440
+assert np.isclose(np.median(cos),retest['unit_response_cosine']['median'],atol=1e-12,rtol=0)
+assert np.isclose(np.median(relative),retest['relative_amplitude_change']['median'],atol=1e-12,rtol=0)
+assert np.isclose(np.percentile(np.abs(relative),95),retest['relative_amplitude_change']['p95_absolute'],atol=1e-12,rtol=0)
 print('PASS: frozen fitting and all reserved contacts reproduced without hardware access.')

@@ -1,0 +1,356 @@
+{
+  "scope": "paired completed Trial_000178 vs Trial_000201; same 63 XY positions, two repeats, commanded depth 0.2 mm",
+  "old": {
+    "contacts": 126,
+    "positions": 63,
+    "response_amplitude_uT": {
+      "n": 126,
+      "mean": 1026.7169321253855,
+      "median": 1023.9004253224186,
+      "p10": 876.8866135889184,
+      "p90": 1218.7350579793092
+    },
+    "hold_noise_rms_uT": {
+      "n": 126,
+      "mean": 32.2125695566823,
+      "median": 32.20669061758155,
+      "p10": 28.761186195617675,
+      "p90": 36.00835263509509
+    },
+    "hold_noise_over_response": {
+      "n": 126,
+      "mean": 0.031877965338343285,
+      "median": 0.03175669715966622,
+      "p10": 0.02646783103392962,
+      "p90": 0.03802574599391587
+    },
+    "component_fall_90_10_ms": {
+      "n": 2,
+      "mean": 785.2100499999999,
+      "median": 785.2100499999999,
+      "p10": 779.1008099999999,
+      "p90": 791.31929
+    },
+    "component_recovery_from_retract_ms": {
+      "n": 2,
+      "mean": 821.6206999999999,
+      "median": 821.6206999999999,
+      "p10": 813.3137399999999,
+      "p90": 829.9276600000001
+    },
+    "component_end_residual_ratio": {
+      "n": 126,
+      "mean": 0.15048522697992334,
+      "median": 0.1473284109607092,
+      "p10": 0.12801217735456613,
+      "p90": 0.17027769052964806
+    },
+    "component_release_mean_ratio": {
+      "n": 126,
+      "mean": 0.29855303973788044,
+      "median": 0.29830059972557077,
+      "p10": 0.26743907153415536,
+      "p90": 0.32205684182766886
+    },
+    "magnitude_fall_90_10_ms": {
+      "n": 2,
+      "mean": 777.68945,
+      "median": 777.68945,
+      "p10": 777.59669,
+      "p90": 777.78221
+    },
+    "magnitude_end_residual_ratio": {
+      "n": 126,
+      "mean": 0.16693413149228328,
+      "median": 0.1656602384001465,
+      "p10": 0.1328062369021039,
+      "p90": 0.19734413489787117
+    },
+    "repeat_angle_deg": {
+      "n": 63,
+      "mean": 1.889611678890022,
+      "median": 1.7147769107195434,
+      "p10": 1.1826073574165856,
+      "p90": 2.552521657909184
+    },
+    "repeat_amplitude_ratio_max_min": {
+      "n": 63,
+      "mean": 1.0215562194271317,
+      "median": 1.0190195062814886,
+      "p10": 1.0033874842606998,
+      "p90": 1.0435115625475972
+    }
+  },
+  "new": {
+    "contacts": 126,
+    "positions": 63,
+    "response_amplitude_uT": {
+      "n": 126,
+      "mean": 375.53879307089437,
+      "median": 326.6942385647279,
+      "p10": 239.91245512496332,
+      "p90": 537.8170952963195
+    },
+    "hold_noise_rms_uT": {
+      "n": 126,
+      "mean": 28.217521936958008,
+      "median": 28.147692125164937,
+      "p10": 25.1494854586756,
+      "p90": 31.503495541627316
+    },
+    "hold_noise_over_response": {
+      "n": 126,
+      "mean": 0.08337981725478703,
+      "median": 0.08474320058668303,
+      "p10": 0.050122871296510704,
+      "p90": 0.11749080233058953
+    },
+    "component_fall_90_10_ms": {
+      "n": 107,
+      "mean": 337.6256728971962,
+      "median": 209.8573,
+      "p10": 149.50886,
+      "p90": 687.56738
+    },
+    "component_recovery_from_retract_ms": {
+      "n": 107,
+      "mean": 356.80381028037385,
+      "median": 244.0095,
+      "p10": 177.24178,
+      "p90": 704.30998
+    },
+    "component_end_residual_ratio": {
+      "n": 126,
+      "mean": 0.10021242908515027,
+      "median": 0.0947591330863938,
+      "p10": 0.06452822301853159,
+      "p90": 0.14333437148890693
+    },
+    "component_release_mean_ratio": {
+      "n": 126,
+      "mean": 0.1640114550688575,
+      "median": 0.16245024837027677,
+      "p10": 0.14369345517448362,
+      "p90": 0.18473112867470837
+    },
+    "magnitude_fall_90_10_ms": {
+      "n": 126,
+      "mean": 155.6301420634921,
+      "median": 149.38569999999999,
+      "p10": 89.6991,
+      "p90": 209.8703
+    },
+    "magnitude_end_residual_ratio": {
+      "n": 126,
+      "mean": 0.06519142567207496,
+      "median": 0.0643635422664446,
+      "p10": 0.037701548969503756,
+      "p90": 0.09654023730969272
+    },
+    "repeat_angle_deg": {
+      "n": 63,
+      "mean": 4.251183976279611,
+      "median": 3.8250741110980924,
+      "p10": 2.616281866774012,
+      "p90": 6.854182833918411
+    },
+    "repeat_amplitude_ratio_max_min": {
+      "n": 63,
+      "mean": 1.0269186933194048,
+      "median": 1.0216262849200135,
+      "p10": 1.0051037292423453,
+      "p90": 1.0624663413368498
+    }
+  },
+  "paired": {
+    "old_new_response_angle_deg": {
+      "n": 126,
+      "mean": 17.144641357110785,
+      "median": 16.604223713501206,
+      "p10": 14.667501084173676,
+      "p90": 20.108147322788792
+    },
+    "new_over_old_response_amplitude": {
+      "n": 126,
+      "mean": 0.35985925658432655,
+      "median": 0.3384818597121122,
+      "p10": 0.265004867964814,
+      "p90": 0.4721563241121942
+    },
+    "per_contact_b0_shift_15d_uT": {
+      "n": 126,
+      "mean": 5527.666000491763,
+      "median": 5513.905773130844,
+      "p10": 5438.634561544062,
+      "p90": 5630.365827274138
+    },
+    "fall_time_reduction_ms_positive_is_better": {
+      "n": 0
+    },
+    "end_residual_change_negative_is_better": {
+      "n": 126,
+      "mean": -0.050272797894773055,
+      "median": -0.057754394894111334,
+      "p10": -0.08624909263366701,
+      "p90": 0.005620654564296966
+    }
+  },
+  "trial_baseline_fingerprint": {
+    "old_sensor_magnitude_uT": [
+      5940.08308046378,
+      6568.028022850942,
+      7396.081106716249,
+      7569.2336088024795,
+      7408.391946199796
+    ],
+    "new_sensor_magnitude_uT": [
+      8241.311734244862,
+      8097.9277153633575,
+      10086.163537113405,
+      9372.603252147239,
+      10747.181396498572
+    ],
+    "15d_shift_uT": 5515.295388772239
+  },
+  "frozen_old_model": {
+    "old": {
+      "xy_mae_mm": 6.595699258351415,
+      "xy_p95_mm": 10.891176868892966,
+      "outside_20mm_fraction": 1.0
+    },
+    "new": {
+      "xy_mae_mm": 7.56158845463084,
+      "xy_p95_mm": 10.519508422794503,
+      "outside_20mm_fraction": 1.0
+    }
+  },
+  "same_trial_repeat_split_spatial_test": {
+    "description": "One repeat is the 63-position template set; the other repeat is classified blindly, then direction is reversed.",
+    "old": {
+      "shape": {
+        "feature": "shape",
+        "directions": [
+          {
+            "train_repeat": 1,
+            "test_repeat": 2,
+            "exact_accuracy": 0.9682539682539683,
+            "xy_mae_mm": 0.031746031746031744,
+            "xy_median_mm": 0.0,
+            "xy_p95_mm": 0.0,
+            "correct_to_nearest_wrong_distance_ratio_median": 0.360597488073993,
+            "correct_closer_than_any_wrong_fraction": 0.9682539682539683
+          },
+          {
+            "train_repeat": 2,
+            "test_repeat": 1,
+            "exact_accuracy": 0.9523809523809523,
+            "xy_mae_mm": 0.0607686845197808,
+            "xy_median_mm": 0.0,
+            "xy_p95_mm": 0.0,
+            "correct_to_nearest_wrong_distance_ratio_median": 0.37119153723625875,
+            "correct_closer_than_any_wrong_fraction": 0.9523809523809523
+          }
+        ],
+        "mean_exact_accuracy": 0.9603174603174602,
+        "mean_xy_mae_mm": 0.04625735813290627,
+        "mean_xy_p95_mm": 0.0,
+        "mean_correct_closer_fraction": 0.9603174603174602
+      },
+      "raw_scaled": {
+        "feature": "raw_scaled",
+        "directions": [
+          {
+            "train_repeat": 1,
+            "test_repeat": 2,
+            "exact_accuracy": 0.9682539682539683,
+            "xy_mae_mm": 0.031746031746031744,
+            "xy_median_mm": 0.0,
+            "xy_p95_mm": 0.0,
+            "correct_to_nearest_wrong_distance_ratio_median": 0.3461284418733059,
+            "correct_closer_than_any_wrong_fraction": 0.9682539682539683
+          },
+          {
+            "train_repeat": 2,
+            "test_repeat": 1,
+            "exact_accuracy": 0.9682539682539683,
+            "xy_mae_mm": 0.031746031746031744,
+            "xy_median_mm": 0.0,
+            "xy_p95_mm": 0.0,
+            "correct_to_nearest_wrong_distance_ratio_median": 0.35782096821326353,
+            "correct_closer_than_any_wrong_fraction": 0.9682539682539683
+          }
+        ],
+        "mean_exact_accuracy": 0.9682539682539683,
+        "mean_xy_mae_mm": 0.031746031746031744,
+        "mean_xy_p95_mm": 0.0,
+        "mean_correct_closer_fraction": 0.9682539682539683
+      }
+    },
+    "new": {
+      "shape": {
+        "feature": "shape",
+        "directions": [
+          {
+            "train_repeat": 1,
+            "test_repeat": 2,
+            "exact_accuracy": 0.873015873015873,
+            "xy_mae_mm": 0.14670858233522674,
+            "xy_median_mm": 0.0,
+            "xy_p95_mm": 1.0,
+            "correct_to_nearest_wrong_distance_ratio_median": 0.6711486055203906,
+            "correct_closer_than_any_wrong_fraction": 0.873015873015873
+          },
+          {
+            "train_repeat": 2,
+            "test_repeat": 1,
+            "exact_accuracy": 0.8888888888888888,
+            "xy_mae_mm": 0.13741038491257745,
+            "xy_median_mm": 0.0,
+            "xy_p95_mm": 1.3727922061357851,
+            "correct_to_nearest_wrong_distance_ratio_median": 0.6809614184186502,
+            "correct_closer_than_any_wrong_fraction": 0.8888888888888888
+          }
+        ],
+        "mean_exact_accuracy": 0.8809523809523809,
+        "mean_xy_mae_mm": 0.14205948362390208,
+        "mean_xy_p95_mm": 1.1863961030678927,
+        "mean_correct_closer_fraction": 0.8809523809523809
+      },
+      "raw_scaled": {
+        "feature": "raw_scaled",
+        "directions": [
+          {
+            "train_repeat": 1,
+            "test_repeat": 2,
+            "exact_accuracy": 0.9206349206349206,
+            "xy_mae_mm": 0.07936507936507936,
+            "xy_median_mm": 0.0,
+            "xy_p95_mm": 1.0,
+            "correct_to_nearest_wrong_distance_ratio_median": 0.6316182225527718,
+            "correct_closer_than_any_wrong_fraction": 0.9206349206349206
+          },
+          {
+            "train_repeat": 2,
+            "test_repeat": 1,
+            "exact_accuracy": 0.8888888888888888,
+            "xy_mae_mm": 0.11768592956147769,
+            "xy_median_mm": 0.0,
+            "xy_p95_mm": 1.0,
+            "correct_to_nearest_wrong_distance_ratio_median": 0.6300499019900359,
+            "correct_closer_than_any_wrong_fraction": 0.8888888888888888
+          }
+        ],
+        "mean_exact_accuracy": 0.9047619047619047,
+        "mean_xy_mae_mm": 0.09852550446327853,
+        "mean_xy_p95_mm": 1.0,
+        "mean_correct_closer_fraction": 0.9047619047619047
+      }
+    }
+  },
+  "interpretation_limits": [
+    "Commanded printer timing is used; no independent force/contact measurement.",
+    "Only first completed row-block trial of the new plan is included; new plan remains in progress.",
+    "The filename indenter label flat_d6mm does not describe the confirmed physical nozzle outer diameter of 4 mm.",
+    "A paired before/after difference supports an installation-state effect but does not isolate displacement, tilt, gap and preload."
+  ]
+}

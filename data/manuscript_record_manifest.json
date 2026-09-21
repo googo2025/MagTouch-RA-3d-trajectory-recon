@@ -1,0 +1,220 @@
+{
+  "scope": "Records and derived data used by the revised manuscript; this is not a complete development archive or a preregistered action cohort.",
+  "policy": {
+    "included": "Data, frozen outputs, models, configurations and scripts required for reported manuscript tables, figures and numerical claims.",
+    "excluded": "Development attempts, aborted runs, unpublished configurations and records that do not support a manuscript claim."
+  },
+  "static": {
+    "configuration_comparison": {
+      "public_files": [
+        "models/four_configuration_comparison_parameters.json",
+        "models/same_source_field_diagnostics.json"
+      ],
+      "manuscript_use": [
+        "Table 1",
+        "Figure 3"
+      ]
+    },
+    "calibration_density_and_reserved_repeat": {
+      "training_trials": [
+        149,
+        150,
+        153
+      ],
+      "test_trial": 154,
+      "public_files": [
+        "data/static/static_reproduction_contacts.json",
+        "data/static/frozen_static_model_parameters.json",
+        "data/static/reproduce_static_results.py",
+        "data/static/retest_response_summary.json"
+      ],
+      "manuscript_use": [
+        "Table 2",
+        "Figure 4",
+        "0.288 mm static result",
+        "Trial 153/154 repeat-response comparison"
+      ]
+    }
+  },
+  "session_iii_dynamic": [
+    {
+      "session": "S20260920_A",
+      "trial_id": 4,
+      "representative_xyz_action": false,
+      "manuscript_use": [
+        "Table 4",
+        "SC-RBF cross-scan comparison"
+      ]
+    },
+    {
+      "session": "S20260920_A",
+      "trial_id": 5,
+      "representative_xyz_action": false,
+      "manuscript_use": [
+        "Table 4",
+        "WD-RBF cross-scan comparison"
+      ]
+    },
+    {
+      "session": "S20260920_A",
+      "trial_id": 17,
+      "representative_xyz_action": false,
+      "manuscript_use": [
+        "Table 4",
+        "Figure 5a",
+        "eight-direction trajectory"
+      ]
+    },
+    {
+      "session": "S20260920_A",
+      "trial_id": 18,
+      "representative_xyz_action": false,
+      "manuscript_use": [
+        "Table 4",
+        "Figure 5b",
+        "2 mm segmented circle"
+      ]
+    },
+    {
+      "session": "S20260920_A",
+      "trial_id": 19,
+      "representative_xyz_action": false,
+      "manuscript_use": [
+        "Table 4",
+        "5 mm segmented circle"
+      ]
+    },
+    {
+      "session": "S20260920_A",
+      "trial_id": 20,
+      "representative_xyz_action": false,
+      "manuscript_use": [
+        "Table 4",
+        "Figure 5c",
+        "4 mm segmented circle"
+      ]
+    },
+    {
+      "session": "S20260920_A",
+      "trial_id": 26,
+      "representative_xyz_action": true,
+      "manuscript_use": [
+        "representative XYZ action summary"
+      ]
+    },
+    {
+      "session": "S20260920_A",
+      "trial_id": 28,
+      "representative_xyz_action": true,
+      "manuscript_use": [
+        "representative XYZ action summary"
+      ]
+    },
+    {
+      "session": "S20260920_A",
+      "trial_id": 30,
+      "representative_xyz_action": true,
+      "manuscript_use": [
+        "representative XYZ action summary"
+      ]
+    },
+    {
+      "session": "S20260920_A",
+      "trial_id": 31,
+      "representative_xyz_action": true,
+      "manuscript_use": [
+        "representative XYZ action summary"
+      ]
+    },
+    {
+      "session": "S20260920_A",
+      "trial_id": 32,
+      "representative_xyz_action": true,
+      "manuscript_use": [
+        "Figure 6",
+        "representative repeated XYZ action"
+      ]
+    },
+    {
+      "session": "S20260920_A",
+      "trial_id": 34,
+      "representative_xyz_action": true,
+      "manuscript_use": [
+        "representative XYZ action summary"
+      ]
+    },
+    {
+      "session": "S20260920_A",
+      "trial_id": 35,
+      "representative_xyz_action": true,
+      "manuscript_use": [
+        "representative XYZ action summary"
+      ]
+    },
+    {
+      "session": "S20260920_A",
+      "trial_id": 36,
+      "representative_xyz_action": true,
+      "manuscript_use": [
+        "representative XYZ action summary",
+        "Video S2"
+      ]
+    },
+    {
+      "session": "S20260920_A",
+      "trial_id": 37,
+      "representative_xyz_action": false,
+      "manuscript_use": [
+        "Table 4",
+        "large-range radial record"
+      ]
+    },
+    {
+      "session": "S20260920_A",
+      "trial_id": 38,
+      "representative_xyz_action": false,
+      "manuscript_use": [
+        "Table 4",
+        "large-range circle record"
+      ]
+    },
+    {
+      "session": "S20260920_A",
+      "trial_id": 39,
+      "representative_xyz_action": false,
+      "manuscript_use": [
+        "post-reassembly 81-position grid"
+      ]
+    }
+  ],
+  "depth_paths": {
+    "session": "S20260919_A",
+    "trial_ids": [
+      133,
+      134
+    ],
+    "public_directory": "data/depth_repeat",
+    "manuscript_use": [
+      "Section 3.5 local depth comparison"
+    ]
+  },
+  "reassembly": {
+    "metadata_audit_records": 398,
+    "controlled_pair": [
+      "S20260918_A Trial 178 before reseating",
+      "S20260918_A Trial 201 after reseating"
+    ],
+    "public_directory": "data/remount",
+    "manuscript_use": [
+      "physical reassembly evidence and scope boundary"
+    ]
+  },
+  "acquisition": {
+    "public_directory": "data/acquisition",
+    "manuscript_use": [
+      "per-trial MLX90393 settings",
+      "effective grouped rate",
+      "short unloaded-window noise and shift"
+    ]
+  }
+}

@@ -1,0 +1,1407 @@
+{
+  "scope": "Metadata-only audit; no source edits and no new model fitting.",
+  "counts": {
+    "S20260918_A": 221,
+    "S20260919_A": 138,
+    "S20260920_A": 39
+  },
+  "metadata_parse_errors": [],
+  "operator_confirmation": "2026-09-21 用户补充：实验间隔中更换其他参数配置涉及重新装配；不能把跨装配记录仅解释为软件重新初始化。此条为操作人员补充，不冒充软件自动检测。",
+  "caveat": "Layer/configuration transitions are metadata evidence; a changed speed, model, registration or time gap alone is not a machine-detected physical removal event. Identical registration does not prove no manual reassembly.",
+  "layer_transitions": [
+    {
+      "before": {
+        "path": "data\\S20260918_A\\Plan_20260918_022707_MagTouch_H3_LivePrediction_Backtest-5-5\\Trial_000090_PRED_BACKTEST_angle_scan_z0p6_dx3_n8_v3_h0p15_rep4_ri0p5_flat_d6mm_silicone_v2_magnetic_laye\\meta.json",
+        "session": "S20260918_A",
+        "trial_id": "000090",
+        "created": "2026-09-18T03:13:09",
+        "closed": "2026-09-18T03:15:25",
+        "status": "completed",
+        "mode": "angle_scan",
+        "depth": 0.6,
+        "speed": 3.0,
+        "layer": "magnetic_layer_v1_5*5",
+        "layer_id": "magnetic_layer_v2",
+        "contact_z": 13.8,
+        "center": [
+          149.0,
+          147.0
+        ],
+        "model": "5×5｜121点正式混合",
+        "model_hash": "c3b9fc5c7774148d423db196f9457b79fbe2888e004ec8a705e496669c7dbc02",
+        "source_plan": "Plan_20260917_211757_MagTouch_PureFit_20x20_2mm_Interpolation-5-5",
+        "rotation": null,
+        "translation": null,
+        "registration_source": null,
+        "notes": ""
+      },
+      "after": {
+        "path": "data\\S20260918_A\\Plan_20260918_031939_MagTouch_H3_LivePrediction_Backtest-19c\\Trial_000091_PRED_BACKTEST_none_h20_flat_d6mm_silicone_v1_magnetic_layer_v1\\meta.json",
+        "session": "S20260918_A",
+        "trial_id": "000091",
+        "created": "2026-09-18T03:19:46",
+        "closed": "2026-09-18T03:20:06",
+        "status": "completed",
+        "mode": "none",
+        "depth": 0.2,
+        "speed": 1.0,
+        "layer": "magnetic_layer_v1_19C_historical",
+        "layer_id": "magnetic_layer_v1",
+        "contact_z": 13.0,
+        "center": [
+          149.0,
+          147.0
+        ],
+        "model": "19C｜121点正式混合",
+        "model_hash": "c3b9fc5c7774148d423db196f9457b79fbe2888e004ec8a705e496669c7dbc02",
+        "source_plan": "Plan_20260917_202428_MagTouch_PureFit_20x20_2mm_Interpolation-19c",
+        "rotation": null,
+        "translation": null,
+        "registration_source": null,
+        "notes": ""
+      }
+    },
+    {
+      "before": {
+        "path": "data\\S20260918_A\\Plan_20260918_033602_MagTouch_H3_LivePrediction_Backtest-19c\\Trial_000147_PRED_BACKTEST_angle_scan_z0p6_dx3_n8_v3_h0p15_rep4_ri0p5_flat_d6mm_silicone_v1_magnetic_laye\\meta.json",
+        "session": "S20260918_A",
+        "trial_id": "000147",
+        "created": "2026-09-18T04:15:41",
+        "closed": "2026-09-18T04:17:56",
+        "status": "completed",
+        "mode": "angle_scan",
+        "depth": 0.6,
+        "speed": 3.0,
+        "layer": "magnetic_layer_v1_19C_historical",
+        "layer_id": "magnetic_layer_v1",
+        "contact_z": 13.0,
+        "center": [
+          149.0,
+          147.0
+        ],
+        "model": "19C｜121点正式混合",
+        "model_hash": "c3b9fc5c7774148d423db196f9457b79fbe2888e004ec8a705e496669c7dbc02",
+        "source_plan": "Plan_20260917_202428_MagTouch_PureFit_20x20_2mm_Interpolation-19c",
+        "rotation": null,
+        "translation": null,
+        "registration_source": null,
+        "notes": ""
+      },
+      "after": {
+        "path": "data\\S20260918_A\\Trial_000148_WITH_PRED_grid_points_z0p6_hx10_hy10_st2_v10_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magne\\meta.json",
+        "session": "S20260918_A",
+        "trial_id": "000148",
+        "created": "2026-09-18T13:59:02",
+        "closed": "2026-09-18T14:04:11",
+        "status": "completed",
+        "mode": "grid_points",
+        "depth": 0.6,
+        "speed": 10.0,
+        "layer": "magnetic_layer_v1_5*5",
+        "layer_id": "magnetic_layer_v2",
+        "contact_z": 13.8,
+        "center": [
+          149.0,
+          147.0
+        ],
+        "model": "5×5｜121点正式连续",
+        "model_hash": "c3b9fc5c7774148d423db196f9457b79fbe2888e004ec8a705e496669c7dbc02",
+        "source_plan": "Plan_20260917_211757_MagTouch_PureFit_20x20_2mm_Interpolation-5-5",
+        "rotation": null,
+        "translation": null,
+        "registration_source": null,
+        "notes": ""
+      }
+    },
+    {
+      "before": {
+        "path": "data\\S20260918_A\\Plan_20260918_183043_MagTouch_PureFit_20x20_1mm_Dense\\Trial_000177_WITH_PRED_grid_points_z0p8_hx10_hy10_st1_v10_h0p2_rep2_ri0p2_flat_d6mm_silicone_v2_magne\\meta.json",
+        "session": "S20260918_A",
+        "trial_id": "000177",
+        "created": "2026-09-18T21:11:19",
+        "closed": "2026-09-18T21:19:43",
+        "status": "completed",
+        "mode": "grid_points",
+        "depth": 0.8,
+        "speed": 10.0,
+        "layer": "magnetic_layer_v1_5*5",
+        "layer_id": "magnetic_layer_v2",
+        "contact_z": 13.8,
+        "center": [
+          149.0,
+          147.0
+        ],
+        "model": "5×5｜441点1mm连续",
+        "model_hash": "9a4f1867d1ba8fa7fd52de26017c3f93690a14e3bd51b72408b3fb8abfd1389a",
+        "source_plan": "Trial_000149_WITH_PRED_grid_points_z0p3_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet+Trial_000150_WITH_PRED_grid_points_z0p6_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet+Trial_000153_WITH_PRED_grid_points_z0p4_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet",
+        "rotation": null,
+        "translation": null,
+        "registration_source": null,
+        "notes": ""
+      },
+      "after": {
+        "path": "data\\S20260918_A\\Plan_20260918_213119_MagTouch_PureFit_20x20_1mm_Dense-19C\\Trial_000178_WITH_PRED_grid_points_z0p2_hx10_hy10_st1_v10_h0p2_rep2_ri0p2_flat_d6mm_silicone_v1_magne\\meta.json",
+        "session": "S20260918_A",
+        "trial_id": "000178",
+        "created": "2026-09-18T21:31:48",
+        "closed": "2026-09-18T21:38:36",
+        "status": "completed",
+        "mode": "grid_points",
+        "depth": 0.2,
+        "speed": 10.0,
+        "layer": "magnetic_layer_v1_19C_historical",
+        "layer_id": "magnetic_layer_v1",
+        "contact_z": 13.0,
+        "center": [
+          149.0,
+          147.0
+        ],
+        "model": "19C｜121点正式连续",
+        "model_hash": "9a4f1867d1ba8fa7fd52de26017c3f93690a14e3bd51b72408b3fb8abfd1389a",
+        "source_plan": "Plan_20260917_202428_MagTouch_PureFit_20x20_2mm_Interpolation-19c",
+        "rotation": null,
+        "translation": null,
+        "registration_source": null,
+        "notes": ""
+      }
+    },
+    {
+      "before": {
+        "path": "data\\S20260919_A\\Trial_000012_WITH_PRED_cross_scan_z0p6_dx4_dy4_v2_h0p5_rep2_ri1_flat_d6mm_silicone_v1_magnetic_layer_\\meta.json",
+        "session": "S20260919_A",
+        "trial_id": "000012",
+        "created": "2026-09-19T12:27:16",
+        "closed": "2026-09-19T12:28:02",
+        "status": "completed",
+        "mode": "cross_scan",
+        "depth": 0.6,
+        "speed": 2.0,
+        "layer": "magnetic_layer_v1_19C_historical",
+        "layer_id": "magnetic_layer_v1",
+        "contact_z": 13.0,
+        "center": [
+          149.0,
+          147.0
+        ],
+        "model": "19C｜工作区0.5/0.8动态",
+        "model_hash": "0b976bb73d4258e006df6829a1aaaaec7efa2d124dc6abda7cc6fe674762e1d0",
+        "source_plan": "Plan_20260917_202428_MagTouch_PureFit_20x20_2mm_Interpolation-19c",
+        "rotation": null,
+        "translation": [
+          0.0,
+          0.0
+        ],
+        "registration_source": "none",
+        "notes": ""
+      },
+      "after": {
+        "path": "data\\S20260919_A\\Trial_000013_WITH_PRED_cross_scan_z0p6_dx4_dy4_v2_h0p5_rep2_ri1_flat_d6mm_silicone_v2_magnetic_layer_\\meta.json",
+        "session": "S20260919_A",
+        "trial_id": "000013",
+        "created": "2026-09-19T12:30:57",
+        "closed": "2026-09-19T12:33:30",
+        "status": "completed",
+        "mode": "cross_scan",
+        "depth": 0.6,
+        "speed": 2.0,
+        "layer": "magnetic_layer_v1_5*5",
+        "layer_id": "magnetic_layer_v2",
+        "contact_z": 13.8,
+        "center": [
+          149.0,
+          147.0
+        ],
+        "model": "5×5｜441点1mm连续",
+        "model_hash": "0b976bb73d4258e006df6829a1aaaaec7efa2d124dc6abda7cc6fe674762e1d0",
+        "source_plan": "Trial_000149_WITH_PRED_grid_points_z0p3_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet+Trial_000150_WITH_PRED_grid_points_z0p6_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet+Trial_000153_WITH_PRED_grid_points_z0p4_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet",
+        "rotation": null,
+        "translation": [
+          0.0,
+          0.0
+        ],
+        "registration_source": "none",
+        "notes": ""
+      }
+    },
+    {
+      "before": {
+        "path": "data\\S20260919_A\\Trial_000036_WITH_PRED_cross_scan_z0p6_dx8_dy8_v2_h0p5_rep1_ri1_flat_d6mm_silicone_v2_magnetic_layer_\\meta.json",
+        "session": "S20260919_A",
+        "trial_id": "000036",
+        "created": "2026-09-19T13:38:23",
+        "closed": "2026-09-19T13:39:05",
+        "status": "completed",
+        "mode": "cross_scan",
+        "depth": 0.6,
+        "speed": 2.0,
+        "layer": "magnetic_layer_v1_5*5",
+        "layer_id": "magnetic_layer_v2",
+        "contact_z": 13.8,
+        "center": [
+          149.0,
+          147.0
+        ],
+        "model": "5×5｜工作区0.5/0.8动态",
+        "model_hash": "7ea883c93aa2e7365e49eda73ae20269000e59ef190964e81c650ff66c2740d9",
+        "source_plan": "Plan_20260917_211757_MagTouch_PureFit_20x20_2mm_Interpolation-5-5",
+        "rotation": null,
+        "translation": [
+          -0.8563449709899453,
+          0.38402397878368966
+        ],
+        "registration_source": "five_point_reassembly",
+        "notes": ""
+      },
+      "after": {
+        "path": "data\\S20260919_A\\Trial_000037_WITH_PRED_cross_scan_z0p6_dx8_dy8_v2_h0p5_rep1_ri1_flat_d6mm_silicone_v4_magnetic_layer_\\meta.json",
+        "session": "S20260919_A",
+        "trial_id": "000037",
+        "created": "2026-09-19T13:42:36",
+        "closed": "2026-09-19T13:43:18",
+        "status": "completed",
+        "mode": "cross_scan",
+        "depth": 0.6,
+        "speed": 2.0,
+        "layer": "magnetic_layer_v1_flot1650-2.5mm",
+        "layer_id": "magnetic_layer_v4",
+        "contact_z": 9.3,
+        "center": [
+          149.0,
+          147.0
+        ],
+        "model": "flot1650-2.5mm｜工作区0.5/0.8动态",
+        "model_hash": "7ea883c93aa2e7365e49eda73ae20269000e59ef190964e81c650ff66c2740d9",
+        "source_plan": "Plan_20260917_143129_MagTouch_PureFit_20x20_2mm_Interpolation-flot1650-2.5mm",
+        "rotation": null,
+        "translation": [
+          0.0,
+          0.0
+        ],
+        "registration_source": "none",
+        "notes": ""
+      }
+    },
+    {
+      "before": {
+        "path": "data\\S20260919_A\\Trial_000043_WITH_PRED_grid_points_z0p4_hx4_hy4_st2_v2_h0p5_rep1_ri1_flat_d6mm_silicone_v4_magnetic_l\\meta.json",
+        "session": "S20260919_A",
+        "trial_id": "000043",
+        "created": "2026-09-19T13:49:07",
+        "closed": "2026-09-19T13:50:37",
+        "status": "completed",
+        "mode": "grid_points",
+        "depth": 0.4,
+        "speed": 2.0,
+        "layer": "magnetic_layer_v1_flot1650-2.5mm",
+        "layer_id": "magnetic_layer_v4",
+        "contact_z": 9.3,
+        "center": [
+          149.0,
+          147.0
+        ],
+        "model": "flot1650-2.5mm｜121点正式连续",
+        "model_hash": "7ea883c93aa2e7365e49eda73ae20269000e59ef190964e81c650ff66c2740d9",
+        "source_plan": "Plan_20260917_143129_MagTouch_PureFit_20x20_2mm_Interpolation-flot1650-2.5mm",
+        "rotation": null,
+        "translation": [
+          0.0,
+          0.0
+        ],
+        "registration_source": "none",
+        "notes": ""
+      },
+      "after": {
+        "path": "data\\S20260919_A\\Trial_000044_WITH_PRED_grid_points_z0p4_hx4_hy4_st2_v2_h0p5_rep1_ri1_flat_d6mm_silicone_v3_magnetic_l\\meta.json",
+        "session": "S20260919_A",
+        "trial_id": "000044",
+        "created": "2026-09-19T13:52:19",
+        "closed": "2026-09-19T13:53:51",
+        "status": "completed",
+        "mode": "grid_points",
+        "depth": 0.4,
+        "speed": 2.0,
+        "layer": "magnetic_layer_v1_flot1650",
+        "layer_id": "magnetic_layer_v3",
+        "contact_z": 11.2,
+        "center": [
+          149.0,
+          147.0
+        ],
+        "model": "flot1650-4.5mm｜121点正式连续",
+        "model_hash": "7ea883c93aa2e7365e49eda73ae20269000e59ef190964e81c650ff66c2740d9",
+        "source_plan": "Plan_20260917_220949_MagTouch_PureFit_20x20_2mm_Interpolation-flot1650-4.5mm",
+        "rotation": null,
+        "translation": [
+          0.0,
+          0.0
+        ],
+        "registration_source": "none",
+        "notes": ""
+      }
+    },
+    {
+      "before": {
+        "path": "data\\S20260919_A\\Trial_000051_WITH_PRED_cross_scan_z0p4_dx8_dy8_v2_h0p5_rep1_ri1_flat_d6mm_silicone_v3_magnetic_layer_\\meta.json",
+        "session": "S20260919_A",
+        "trial_id": "000051",
+        "created": "2026-09-19T14:03:58",
+        "closed": "2026-09-19T14:04:40",
+        "status": "completed",
+        "mode": "cross_scan",
+        "depth": 0.4,
+        "speed": 2.0,
+        "layer": "magnetic_layer_v1_flot1650",
+        "layer_id": "magnetic_layer_v3",
+        "contact_z": 11.2,
+        "center": [
+          149.0,
+          147.0
+        ],
+        "model": "flot1650-4.5mm｜121点正式连续",
+        "model_hash": "7ea883c93aa2e7365e49eda73ae20269000e59ef190964e81c650ff66c2740d9",
+        "source_plan": "Plan_20260917_220949_MagTouch_PureFit_20x20_2mm_Interpolation-flot1650-4.5mm",
+        "rotation": null,
+        "translation": [
+          0.0,
+          0.0
+        ],
+        "registration_source": "none",
+        "notes": ""
+      },
+      "after": {
+        "path": "data\\S20260919_A\\Trial_000052_WITH_PRED_cross_scan_z0p4_dx8_dy8_v2_h0p5_rep1_ri1_flat_d6mm_silicone_v1_magnetic_layer_\\meta.json",
+        "session": "S20260919_A",
+        "trial_id": "000052",
+        "created": "2026-09-19T14:14:52",
+        "closed": "2026-09-19T14:15:05",
+        "status": "completed",
+        "mode": "cross_scan",
+        "depth": 0.4,
+        "speed": 2.0,
+        "layer": "magnetic_layer_v1_19C_historical",
+        "layer_id": "magnetic_layer_v1",
+        "contact_z": 13.0,
+        "center": [
+          149.0,
+          147.0
+        ],
+        "model": "19C｜121点正式连续",
+        "model_hash": "7ea883c93aa2e7365e49eda73ae20269000e59ef190964e81c650ff66c2740d9",
+        "source_plan": "Plan_20260919_002411_MagTouch_PureFit_20x20_1mm_Dense-19C",
+        "rotation": null,
+        "translation": [
+          0.0,
+          0.0
+        ],
+        "registration_source": "none",
+        "notes": ""
+      }
+    },
+    {
+      "before": {
+        "path": "data\\S20260919_A\\Trial_000053_WITH_PRED_cross_scan_z0p4_dx8_dy8_v2_h0p5_rep1_ri1_flat_d6mm_silicone_v1_magnetic_layer_\\meta.json",
+        "session": "S20260919_A",
+        "trial_id": "000053",
+        "created": "2026-09-19T14:15:27",
+        "closed": "2026-09-19T14:17:24",
+        "status": "completed",
+        "mode": "cross_scan",
+        "depth": 0.4,
+        "speed": 2.0,
+        "layer": "magnetic_layer_v1_19C_historical",
+        "layer_id": "magnetic_layer_v1",
+        "contact_z": 13.0,
+        "center": [
+          149.0,
+          147.0
+        ],
+        "model": "19C｜121点正式连续",
+        "model_hash": "7ea883c93aa2e7365e49eda73ae20269000e59ef190964e81c650ff66c2740d9",
+        "source_plan": "Plan_20260919_002411_MagTouch_PureFit_20x20_1mm_Dense-19C",
+        "rotation": null,
+        "translation": [
+          0.0,
+          0.0
+        ],
+        "registration_source": "none",
+        "notes": ""
+      },
+      "after": {
+        "path": "data\\S20260919_A\\Trial_000054_WITH_PRED_cross_scan_z0p4_dx8_dy8_v4_h0p5_rep1_ri1_flat_d6mm_silicone_v2_magnetic_layer_\\meta.json",
+        "session": "S20260919_A",
+        "trial_id": "000054",
+        "created": "2026-09-19T15:05:34",
+        "closed": "2026-09-19T15:05:57",
+        "status": "completed",
+        "mode": "cross_scan",
+        "depth": 0.4,
+        "speed": 4.0,
+        "layer": "magnetic_layer_v1_5*5",
+        "layer_id": "magnetic_layer_v2",
+        "contact_z": 13.8,
+        "center": [
+          149.0,
+          147.0
+        ],
+        "model": "5×5｜441点1mm连续",
+        "model_hash": "7ea883c93aa2e7365e49eda73ae20269000e59ef190964e81c650ff66c2740d9",
+        "source_plan": "Trial_000149_WITH_PRED_grid_points_z0p3_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet+Trial_000150_WITH_PRED_grid_points_z0p6_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet+Trial_000153_WITH_PRED_grid_points_z0p4_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet",
+        "rotation": null,
+        "translation": [
+          -1.0112783015184714,
+          0.7933422462528092
+        ],
+        "registration_source": "five_point_reassembly",
+        "notes": ""
+      }
+    },
+    {
+      "before": {
+        "path": "data\\S20260919_A\\Trial_000108_WITH_PRED_cross_scan_z0p6_dx4_dy4_v2_h0p5_rep1_ri1_flat_d6mm_silicone_v2_magnetic_layer_\\meta.json",
+        "session": "S20260919_A",
+        "trial_id": "000108",
+        "created": "2026-09-19T21:29:34",
+        "closed": "2026-09-19T21:29:57",
+        "status": "completed",
+        "mode": "cross_scan",
+        "depth": 0.6,
+        "speed": 2.0,
+        "layer": "magnetic_layer_v1_5*5",
+        "layer_id": "magnetic_layer_v2",
+        "contact_z": 13.8,
+        "center": [
+          149.0,
+          147.0
+        ],
+        "model": "relative_r15_R3_H64_q1_seed20260910_best_regression.pt | H2-R15 R3 | H64 (1.60s) | Q=1 | cuda",
+        "model_hash": null,
+        "source_plan": null,
+        "rotation": null,
+        "translation": null,
+        "registration_source": null,
+        "notes": ""
+      },
+      "after": {
+        "path": "data\\S20260919_A\\Trial_000109_WITH_PRED_cross_scan_z0p6_dx4_dy4_v2_h0p5_rep1_ri1_flat_d6mm_silicone_v4_magnetic_layer_\\meta.json",
+        "session": "S20260919_A",
+        "trial_id": "000109",
+        "created": "2026-09-19T21:35:42",
+        "closed": "2026-09-19T21:36:07",
+        "status": "completed",
+        "mode": "cross_scan",
+        "depth": 0.6,
+        "speed": 2.0,
+        "layer": "magnetic_layer_v1_flot1650-2.5mm",
+        "layer_id": "magnetic_layer_v4",
+        "contact_z": 9.3,
+        "center": [
+          149.0,
+          147.0
+        ],
+        "model": "unified_r18_1_unified_common_R1_H64_q1_emin128_seed20260911_best.pt | H2-Unified-R18 unified R1 | H64 | printer_centered_magnetic_contact_v3 | cuda",
+        "model_hash": null,
+        "source_plan": null,
+        "rotation": null,
+        "translation": null,
+        "registration_source": null,
+        "notes": ""
+      }
+    },
+    {
+      "before": {
+        "path": "data\\S20260919_A\\Trial_000111_WITH_PRED_grid_points_z0p6_hx4_hy4_st2_v2_h0p5_rep1_ri1_flat_d6mm_silicone_v4_magnetic_l\\meta.json",
+        "session": "S20260919_A",
+        "trial_id": "000111",
+        "created": "2026-09-19T21:39:34",
+        "closed": "2026-09-19T21:41:06",
+        "status": "completed",
+        "mode": "grid_points",
+        "depth": 0.6,
+        "speed": 2.0,
+        "layer": "magnetic_layer_v1_flot1650-2.5mm",
+        "layer_id": "magnetic_layer_v4",
+        "contact_z": 9.3,
+        "center": [
+          149.0,
+          147.0
+        ],
+        "model": "unified_r18_1_unified_common_R1_H64_q1_emin128_seed20260911_best.pt | H2-Unified-R18 unified R1 | H64 | printer_centered_magnetic_contact_v3 | cuda",
+        "model_hash": null,
+        "source_plan": null,
+        "rotation": null,
+        "translation": null,
+        "registration_source": null,
+        "notes": ""
+      },
+      "after": {
+        "path": "data\\S20260919_A\\Trial_000113_WITH_PRED_cross_scan_z0p6_dx8_dy8_v2_h0p5_rep1_ri1_flat_d6mm_silicone_v2_magnetic_layer_\\meta.json",
+        "session": "S20260919_A",
+        "trial_id": "000113",
+        "created": "2026-09-19T23:32:59",
+        "closed": "2026-09-19T23:33:46",
+        "status": "completed",
+        "mode": "cross_scan",
+        "depth": 0.6,
+        "speed": 2.0,
+        "layer": "magnetic_layer_v1_5*5",
+        "layer_id": "magnetic_layer_v2",
+        "contact_z": 13.8,
+        "center": [
+          149.0,
+          147.0
+        ],
+        "model": "5×5｜同源1mm→工作区0.4–0.6",
+        "model_hash": "b9ae95470fdbb06716687d0081067ed3a72942ce77362988b8618af114894c27",
+        "source_plan": "S20260918_A/Trials148-150,152-154",
+        "rotation": -4.169797585076551,
+        "translation": [
+          1.053878798065982,
+          -0.4775636996206737
+        ],
+        "registration_source": "five_point_reassembly",
+        "notes": ""
+      }
+    }
+  ],
+  "dense_source_and_test_records": [
+    {
+      "path": "data\\S20260918_A\\Trial_000149_WITH_PRED_grid_points_z0p3_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet\\meta.json",
+      "session": "S20260918_A",
+      "trial_id": "000149",
+      "created": "2026-09-18T14:14:03",
+      "closed": "2026-09-18T14:34:27",
+      "status": "completed",
+      "mode": "grid_points",
+      "depth": 0.3,
+      "speed": 2.0,
+      "layer": "magnetic_layer_v1_5*5",
+      "layer_id": "magnetic_layer_v2",
+      "contact_z": 13.8,
+      "center": [
+        149.0,
+        147.0
+      ],
+      "model": "5×5｜121点正式连续",
+      "model_hash": "c3b9fc5c7774148d423db196f9457b79fbe2888e004ec8a705e496669c7dbc02",
+      "source_plan": "Plan_20260917_211757_MagTouch_PureFit_20x20_2mm_Interpolation-5-5",
+      "rotation": null,
+      "translation": null,
+      "registration_source": null,
+      "notes": ""
+    },
+    {
+      "path": "data\\S20260918_A\\Trial_000150_WITH_PRED_grid_points_z0p6_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet\\meta.json",
+      "session": "S20260918_A",
+      "trial_id": "000150",
+      "created": "2026-09-18T14:41:10",
+      "closed": "2026-09-18T15:02:07",
+      "status": "completed",
+      "mode": "grid_points",
+      "depth": 0.6,
+      "speed": 2.0,
+      "layer": "magnetic_layer_v1_5*5",
+      "layer_id": "magnetic_layer_v2",
+      "contact_z": 13.8,
+      "center": [
+        149.0,
+        147.0
+      ],
+      "model": "5×5｜121点正式连续",
+      "model_hash": "c3b9fc5c7774148d423db196f9457b79fbe2888e004ec8a705e496669c7dbc02",
+      "source_plan": "Plan_20260917_211757_MagTouch_PureFit_20x20_2mm_Interpolation-5-5",
+      "rotation": null,
+      "translation": null,
+      "registration_source": null,
+      "notes": ""
+    },
+    {
+      "path": "data\\S20260918_A\\Trial_000153_WITH_PRED_grid_points_z0p4_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet\\meta.json",
+      "session": "S20260918_A",
+      "trial_id": "000153",
+      "created": "2026-09-18T16:10:14",
+      "closed": "2026-09-18T16:31:02",
+      "status": "completed",
+      "mode": "grid_points",
+      "depth": 0.4,
+      "speed": 2.0,
+      "layer": "magnetic_layer_v1_5*5",
+      "layer_id": "magnetic_layer_v2",
+      "contact_z": 13.8,
+      "center": [
+        149.0,
+        147.0
+      ],
+      "model": "5×5｜121点正式连续",
+      "model_hash": "c3b9fc5c7774148d423db196f9457b79fbe2888e004ec8a705e496669c7dbc02",
+      "source_plan": "Plan_20260917_211757_MagTouch_PureFit_20x20_2mm_Interpolation-5-5",
+      "rotation": null,
+      "translation": null,
+      "registration_source": null,
+      "notes": ""
+    },
+    {
+      "path": "data\\S20260918_A\\Trial_000154_WITH_PRED_grid_points_z0p4_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet\\meta.json",
+      "session": "S20260918_A",
+      "trial_id": "000154",
+      "created": "2026-09-18T16:34:37",
+      "closed": "2026-09-18T16:55:27",
+      "status": "completed",
+      "mode": "grid_points",
+      "depth": 0.4,
+      "speed": 2.0,
+      "layer": "magnetic_layer_v1_5*5",
+      "layer_id": "magnetic_layer_v2",
+      "contact_z": 13.8,
+      "center": [
+        149.0,
+        147.0
+      ],
+      "model": "5×5｜121点正式混合",
+      "model_hash": "c3b9fc5c7774148d423db196f9457b79fbe2888e004ec8a705e496669c7dbc02",
+      "source_plan": "Plan_20260917_211757_MagTouch_PureFit_20x20_2mm_Interpolation-5-5",
+      "rotation": null,
+      "translation": null,
+      "registration_source": null,
+      "notes": ""
+    }
+  ],
+  "selected_reassembly_records": [
+    {
+      "path": "data\\S20260918_A\\Trial_000148_WITH_PRED_grid_points_z0p6_hx10_hy10_st2_v10_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magne\\meta.json",
+      "session": "S20260918_A",
+      "trial_id": "000148",
+      "created": "2026-09-18T13:59:02",
+      "closed": "2026-09-18T14:04:11",
+      "status": "completed",
+      "mode": "grid_points",
+      "depth": 0.6,
+      "speed": 10.0,
+      "layer": "magnetic_layer_v1_5*5",
+      "layer_id": "magnetic_layer_v2",
+      "contact_z": 13.8,
+      "center": [
+        149.0,
+        147.0
+      ],
+      "model": "5×5｜121点正式连续",
+      "model_hash": "c3b9fc5c7774148d423db196f9457b79fbe2888e004ec8a705e496669c7dbc02",
+      "source_plan": "Plan_20260917_211757_MagTouch_PureFit_20x20_2mm_Interpolation-5-5",
+      "rotation": null,
+      "translation": null,
+      "registration_source": null,
+      "notes": ""
+    },
+    {
+      "path": "data\\S20260918_A\\Trial_000149_WITH_PRED_grid_points_z0p3_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet\\meta.json",
+      "session": "S20260918_A",
+      "trial_id": "000149",
+      "created": "2026-09-18T14:14:03",
+      "closed": "2026-09-18T14:34:27",
+      "status": "completed",
+      "mode": "grid_points",
+      "depth": 0.3,
+      "speed": 2.0,
+      "layer": "magnetic_layer_v1_5*5",
+      "layer_id": "magnetic_layer_v2",
+      "contact_z": 13.8,
+      "center": [
+        149.0,
+        147.0
+      ],
+      "model": "5×5｜121点正式连续",
+      "model_hash": "c3b9fc5c7774148d423db196f9457b79fbe2888e004ec8a705e496669c7dbc02",
+      "source_plan": "Plan_20260917_211757_MagTouch_PureFit_20x20_2mm_Interpolation-5-5",
+      "rotation": null,
+      "translation": null,
+      "registration_source": null,
+      "notes": ""
+    },
+    {
+      "path": "data\\S20260918_A\\Trial_000150_WITH_PRED_grid_points_z0p6_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet\\meta.json",
+      "session": "S20260918_A",
+      "trial_id": "000150",
+      "created": "2026-09-18T14:41:10",
+      "closed": "2026-09-18T15:02:07",
+      "status": "completed",
+      "mode": "grid_points",
+      "depth": 0.6,
+      "speed": 2.0,
+      "layer": "magnetic_layer_v1_5*5",
+      "layer_id": "magnetic_layer_v2",
+      "contact_z": 13.8,
+      "center": [
+        149.0,
+        147.0
+      ],
+      "model": "5×5｜121点正式连续",
+      "model_hash": "c3b9fc5c7774148d423db196f9457b79fbe2888e004ec8a705e496669c7dbc02",
+      "source_plan": "Plan_20260917_211757_MagTouch_PureFit_20x20_2mm_Interpolation-5-5",
+      "rotation": null,
+      "translation": null,
+      "registration_source": null,
+      "notes": ""
+    },
+    {
+      "path": "data\\S20260918_A\\Trial_000153_WITH_PRED_grid_points_z0p4_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet\\meta.json",
+      "session": "S20260918_A",
+      "trial_id": "000153",
+      "created": "2026-09-18T16:10:14",
+      "closed": "2026-09-18T16:31:02",
+      "status": "completed",
+      "mode": "grid_points",
+      "depth": 0.4,
+      "speed": 2.0,
+      "layer": "magnetic_layer_v1_5*5",
+      "layer_id": "magnetic_layer_v2",
+      "contact_z": 13.8,
+      "center": [
+        149.0,
+        147.0
+      ],
+      "model": "5×5｜121点正式连续",
+      "model_hash": "c3b9fc5c7774148d423db196f9457b79fbe2888e004ec8a705e496669c7dbc02",
+      "source_plan": "Plan_20260917_211757_MagTouch_PureFit_20x20_2mm_Interpolation-5-5",
+      "rotation": null,
+      "translation": null,
+      "registration_source": null,
+      "notes": ""
+    },
+    {
+      "path": "data\\S20260918_A\\Trial_000154_WITH_PRED_grid_points_z0p4_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet\\meta.json",
+      "session": "S20260918_A",
+      "trial_id": "000154",
+      "created": "2026-09-18T16:34:37",
+      "closed": "2026-09-18T16:55:27",
+      "status": "completed",
+      "mode": "grid_points",
+      "depth": 0.4,
+      "speed": 2.0,
+      "layer": "magnetic_layer_v1_5*5",
+      "layer_id": "magnetic_layer_v2",
+      "contact_z": 13.8,
+      "center": [
+        149.0,
+        147.0
+      ],
+      "model": "5×5｜121点正式混合",
+      "model_hash": "c3b9fc5c7774148d423db196f9457b79fbe2888e004ec8a705e496669c7dbc02",
+      "source_plan": "Plan_20260917_211757_MagTouch_PureFit_20x20_2mm_Interpolation-5-5",
+      "rotation": null,
+      "translation": null,
+      "registration_source": null,
+      "notes": ""
+    },
+    {
+      "path": "data\\S20260918_A\\Plan_20260918_213119_MagTouch_PureFit_20x20_1mm_Dense-19C\\Trial_000178_WITH_PRED_grid_points_z0p2_hx10_hy10_st1_v10_h0p2_rep2_ri0p2_flat_d6mm_silicone_v1_magne\\meta.json",
+      "session": "S20260918_A",
+      "trial_id": "000178",
+      "created": "2026-09-18T21:31:48",
+      "closed": "2026-09-18T21:38:36",
+      "status": "completed",
+      "mode": "grid_points",
+      "depth": 0.2,
+      "speed": 10.0,
+      "layer": "magnetic_layer_v1_19C_historical",
+      "layer_id": "magnetic_layer_v1",
+      "contact_z": 13.0,
+      "center": [
+        149.0,
+        147.0
+      ],
+      "model": "19C｜121点正式连续",
+      "model_hash": "9a4f1867d1ba8fa7fd52de26017c3f93690a14e3bd51b72408b3fb8abfd1389a",
+      "source_plan": "Plan_20260917_202428_MagTouch_PureFit_20x20_2mm_Interpolation-19c",
+      "rotation": null,
+      "translation": null,
+      "registration_source": null,
+      "notes": ""
+    },
+    {
+      "path": "data\\S20260918_A\\Plan_20260919_002411_MagTouch_PureFit_20x20_1mm_Dense-19C\\Trial_000201_WITH_PRED_grid_points_z0p2_hx10_hy10_st1_v10_h0p2_rep2_ri0p2_flat_d6mm_silicone_v1_magne\\meta.json",
+      "session": "S20260918_A",
+      "trial_id": "000201",
+      "created": "2026-09-19T00:24:18",
+      "closed": "2026-09-19T00:31:11",
+      "status": "completed",
+      "mode": "grid_points",
+      "depth": 0.2,
+      "speed": 10.0,
+      "layer": "magnetic_layer_v1_19C_historical",
+      "layer_id": "magnetic_layer_v1",
+      "contact_z": 13.0,
+      "center": [
+        149.0,
+        147.0
+      ],
+      "model": "19C｜121点正式连续",
+      "model_hash": "9a4f1867d1ba8fa7fd52de26017c3f93690a14e3bd51b72408b3fb8abfd1389a",
+      "source_plan": "Plan_20260917_202428_MagTouch_PureFit_20x20_2mm_Interpolation-19c",
+      "rotation": null,
+      "translation": null,
+      "registration_source": null,
+      "notes": ""
+    },
+    {
+      "path": "data\\S20260919_A\\Trial_000013_WITH_PRED_cross_scan_z0p6_dx4_dy4_v2_h0p5_rep2_ri1_flat_d6mm_silicone_v2_magnetic_layer_\\meta.json",
+      "session": "S20260919_A",
+      "trial_id": "000013",
+      "created": "2026-09-19T12:30:57",
+      "closed": "2026-09-19T12:33:30",
+      "status": "completed",
+      "mode": "cross_scan",
+      "depth": 0.6,
+      "speed": 2.0,
+      "layer": "magnetic_layer_v1_5*5",
+      "layer_id": "magnetic_layer_v2",
+      "contact_z": 13.8,
+      "center": [
+        149.0,
+        147.0
+      ],
+      "model": "5×5｜441点1mm连续",
+      "model_hash": "0b976bb73d4258e006df6829a1aaaaec7efa2d124dc6abda7cc6fe674762e1d0",
+      "source_plan": "Trial_000149_WITH_PRED_grid_points_z0p3_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet+Trial_000150_WITH_PRED_grid_points_z0p6_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet+Trial_000153_WITH_PRED_grid_points_z0p4_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet",
+      "rotation": null,
+      "translation": [
+        0.0,
+        0.0
+      ],
+      "registration_source": "none",
+      "notes": ""
+    },
+    {
+      "path": "data\\S20260919_A\\Trial_000054_WITH_PRED_cross_scan_z0p4_dx8_dy8_v4_h0p5_rep1_ri1_flat_d6mm_silicone_v2_magnetic_layer_\\meta.json",
+      "session": "S20260919_A",
+      "trial_id": "000054",
+      "created": "2026-09-19T15:05:34",
+      "closed": "2026-09-19T15:05:57",
+      "status": "completed",
+      "mode": "cross_scan",
+      "depth": 0.4,
+      "speed": 4.0,
+      "layer": "magnetic_layer_v1_5*5",
+      "layer_id": "magnetic_layer_v2",
+      "contact_z": 13.8,
+      "center": [
+        149.0,
+        147.0
+      ],
+      "model": "5×5｜441点1mm连续",
+      "model_hash": "7ea883c93aa2e7365e49eda73ae20269000e59ef190964e81c650ff66c2740d9",
+      "source_plan": "Trial_000149_WITH_PRED_grid_points_z0p3_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet+Trial_000150_WITH_PRED_grid_points_z0p6_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet+Trial_000153_WITH_PRED_grid_points_z0p4_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet",
+      "rotation": null,
+      "translation": [
+        -1.0112783015184714,
+        0.7933422462528092
+      ],
+      "registration_source": "five_point_reassembly",
+      "notes": ""
+    },
+    {
+      "path": "data\\S20260919_A\\Trial_000113_WITH_PRED_cross_scan_z0p6_dx8_dy8_v2_h0p5_rep1_ri1_flat_d6mm_silicone_v2_magnetic_layer_\\meta.json",
+      "session": "S20260919_A",
+      "trial_id": "000113",
+      "created": "2026-09-19T23:32:59",
+      "closed": "2026-09-19T23:33:46",
+      "status": "completed",
+      "mode": "cross_scan",
+      "depth": 0.6,
+      "speed": 2.0,
+      "layer": "magnetic_layer_v1_5*5",
+      "layer_id": "magnetic_layer_v2",
+      "contact_z": 13.8,
+      "center": [
+        149.0,
+        147.0
+      ],
+      "model": "5×5｜同源1mm→工作区0.4–0.6",
+      "model_hash": "b9ae95470fdbb06716687d0081067ed3a72942ce77362988b8618af114894c27",
+      "source_plan": "S20260918_A/Trials148-150,152-154",
+      "rotation": -4.169797585076551,
+      "translation": [
+        1.053878798065982,
+        -0.4775636996206737
+      ],
+      "registration_source": "five_point_reassembly",
+      "notes": ""
+    }
+  ],
+  "shared_registration_group": [
+    {
+      "path": "data\\S20260920_A\\Trial_000004_WITH_PRED_cross_scan_z0p6_dx6_dy6_v2_h0p5_rep1_ri1_flat_d6mm_silicone_v2_magnetic_layer_\\meta.json",
+      "session": "S20260920_A",
+      "trial_id": "000004",
+      "created": "2026-09-20T00:43:11",
+      "closed": "2026-09-20T00:43:44",
+      "status": "completed",
+      "mode": "cross_scan",
+      "depth": 0.6,
+      "speed": 2.0,
+      "layer": "magnetic_layer_v1_5*5",
+      "layer_id": "magnetic_layer_v2",
+      "contact_z": 13.8,
+      "center": [
+        149.0,
+        147.0
+      ],
+      "model": "5×5｜同源1mm→121点连续",
+      "model_hash": "b9ae95470fdbb06716687d0081067ed3a72942ce77362988b8618af114894c27",
+      "source_plan": "S20260918_A/Trials148-150,152-154",
+      "rotation": -0.47953671004652637,
+      "translation": [
+        1.844176042890761,
+        -0.6634312926003987
+      ],
+      "registration_source": "five_point_prediction_xy",
+      "notes": ""
+    },
+    {
+      "path": "data\\S20260920_A\\Trial_000005_WITH_PRED_cross_scan_z0p6_dx6_dy6_v2_h0p5_rep1_ri1_flat_d6mm_silicone_v2_magnetic_layer_\\meta.json",
+      "session": "S20260920_A",
+      "trial_id": "000005",
+      "created": "2026-09-20T00:44:16",
+      "closed": "2026-09-20T00:44:49",
+      "status": "completed",
+      "mode": "cross_scan",
+      "depth": 0.6,
+      "speed": 2.0,
+      "layer": "magnetic_layer_v1_5*5",
+      "layer_id": "magnetic_layer_v2",
+      "contact_z": 13.8,
+      "center": [
+        149.0,
+        147.0
+      ],
+      "model": "5×5｜同源1mm→工作区0.4–0.6",
+      "model_hash": "b9ae95470fdbb06716687d0081067ed3a72942ce77362988b8618af114894c27",
+      "source_plan": "S20260918_A/Trials148-150,152-154",
+      "rotation": -4.169797585076551,
+      "translation": [
+        1.053878798065982,
+        -0.4775636996206737
+      ],
+      "registration_source": "five_point_prediction_xy",
+      "notes": ""
+    },
+    {
+      "path": "data\\S20260920_A\\Trial_000017_WITH_PRED_angle_scan_z0p6_dx4_n8_v2_h0p5_rep2_ri1_flat_d6mm_silicone_v2_magnetic_layer_v\\meta.json",
+      "session": "S20260920_A",
+      "trial_id": "000017",
+      "created": "2026-09-20T12:16:27",
+      "closed": "2026-09-20T12:18:01",
+      "status": "completed",
+      "mode": "angle_scan",
+      "depth": 0.6,
+      "speed": 2.0,
+      "layer": "magnetic_layer_v1_5*5",
+      "layer_id": "magnetic_layer_v2",
+      "contact_z": 13.8,
+      "center": [
+        149.0,
+        147.0
+      ],
+      "model": "5×5｜历史工作区0.5/0.8动态",
+      "model_hash": "b9ae95470fdbb06716687d0081067ed3a72942ce77362988b8618af114894c27",
+      "source_plan": "Plan_20260917_211757_MagTouch_PureFit_20x20_2mm_Interpolation-5-5",
+      "rotation": -10.490704449196263,
+      "translation": [
+        2.335226054643724,
+        0.7579724465021671
+      ],
+      "registration_source": "five_point_prediction_xy",
+      "notes": ""
+    },
+    {
+      "path": "data\\S20260920_A\\Trial_000018_WITH_PRED_circle_scan_z0p6_r2_n128_v2_h0p5_rep2_ri1_flat_d6mm_silicone_v2_magnetic_layer\\meta.json",
+      "session": "S20260920_A",
+      "trial_id": "000018",
+      "created": "2026-09-20T12:18:22",
+      "closed": "2026-09-20T12:19:53",
+      "status": "completed",
+      "mode": "circle_scan",
+      "depth": 0.6,
+      "speed": 2.0,
+      "layer": "magnetic_layer_v1_5*5",
+      "layer_id": "magnetic_layer_v2",
+      "contact_z": 13.8,
+      "center": [
+        149.0,
+        147.0
+      ],
+      "model": "5×5｜历史工作区0.5/0.8动态",
+      "model_hash": "b9ae95470fdbb06716687d0081067ed3a72942ce77362988b8618af114894c27",
+      "source_plan": "Plan_20260917_211757_MagTouch_PureFit_20x20_2mm_Interpolation-5-5",
+      "rotation": -10.490704449196263,
+      "translation": [
+        2.335226054643724,
+        0.7579724465021671
+      ],
+      "registration_source": "five_point_prediction_xy",
+      "notes": ""
+    },
+    {
+      "path": "data\\S20260920_A\\Trial_000019_WITH_PRED_circle_scan_z0p6_r5_n128_v2_h0p5_rep2_ri1_flat_d6mm_silicone_v2_magnetic_layer\\meta.json",
+      "session": "S20260920_A",
+      "trial_id": "000019",
+      "created": "2026-09-20T12:20:04",
+      "closed": "2026-09-20T12:22:08",
+      "status": "completed",
+      "mode": "circle_scan",
+      "depth": 0.6,
+      "speed": 2.0,
+      "layer": "magnetic_layer_v1_5*5",
+      "layer_id": "magnetic_layer_v2",
+      "contact_z": 13.8,
+      "center": [
+        149.0,
+        147.0
+      ],
+      "model": "5×5｜历史工作区0.5/0.8动态",
+      "model_hash": "b9ae95470fdbb06716687d0081067ed3a72942ce77362988b8618af114894c27",
+      "source_plan": "Plan_20260917_211757_MagTouch_PureFit_20x20_2mm_Interpolation-5-5",
+      "rotation": -10.490704449196263,
+      "translation": [
+        2.335226054643724,
+        0.7579724465021671
+      ],
+      "registration_source": "five_point_prediction_xy",
+      "notes": ""
+    },
+    {
+      "path": "data\\S20260920_A\\Trial_000020_WITH_PRED_circle_scan_z0p6_r4_n128_v2_h0p5_rep2_ri1_flat_d6mm_silicone_v2_magnetic_layer\\meta.json",
+      "session": "S20260920_A",
+      "trial_id": "000020",
+      "created": "2026-09-20T12:23:55",
+      "closed": "2026-09-20T12:25:43",
+      "status": "completed",
+      "mode": "circle_scan",
+      "depth": 0.6,
+      "speed": 2.0,
+      "layer": "magnetic_layer_v1_5*5",
+      "layer_id": "magnetic_layer_v2",
+      "contact_z": 13.8,
+      "center": [
+        149.0,
+        147.0
+      ],
+      "model": "5×5｜历史工作区0.5/0.8动态",
+      "model_hash": "b9ae95470fdbb06716687d0081067ed3a72942ce77362988b8618af114894c27",
+      "source_plan": "Plan_20260917_211757_MagTouch_PureFit_20x20_2mm_Interpolation-5-5",
+      "rotation": -10.490704449196263,
+      "translation": [
+        2.335226054643724,
+        0.7579724465021671
+      ],
+      "registration_source": "five_point_prediction_xy",
+      "notes": ""
+    },
+    {
+      "path": "data\\S20260920_A\\Trial_000026_WITH_PRED_compound_z1p2_dxm4_dy4_v0p5_h0p5_rep2_ri1_flat_d6mm_silicone_v2_magnetic_layer\\meta.json",
+      "session": "S20260920_A",
+      "trial_id": "000026",
+      "created": "2026-09-20T12:40:14",
+      "closed": "2026-09-20T12:41:16",
+      "status": "completed",
+      "mode": "compound",
+      "depth": 1.2,
+      "speed": 0.5,
+      "layer": "magnetic_layer_v1_5*5",
+      "layer_id": "magnetic_layer_v2",
+      "contact_z": 13.8,
+      "center": [
+        149.0,
+        147.0
+      ],
+      "model": "5×5｜441点1mm连续",
+      "model_hash": "b9ae95470fdbb06716687d0081067ed3a72942ce77362988b8618af114894c27",
+      "source_plan": "Trial_000149_WITH_PRED_grid_points_z0p3_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet+Trial_000150_WITH_PRED_grid_points_z0p6_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet+Trial_000153_WITH_PRED_grid_points_z0p4_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet",
+      "rotation": -5.320517535109619,
+      "translation": [
+        1.5632453576726308,
+        0.9619817819016465
+      ],
+      "registration_source": "five_point_prediction_xy",
+      "notes": ""
+    },
+    {
+      "path": "data\\S20260920_A\\Trial_000028_WITH_PRED_compound_z1p2_dx4_dym4_v0p5_h0p5_rep2_ri1_flat_d6mm_silicone_v2_magnetic_layer\\meta.json",
+      "session": "S20260920_A",
+      "trial_id": "000028",
+      "created": "2026-09-20T12:42:33",
+      "closed": "2026-09-20T12:43:35",
+      "status": "completed",
+      "mode": "compound",
+      "depth": 1.2,
+      "speed": 0.5,
+      "layer": "magnetic_layer_v1_5*5",
+      "layer_id": "magnetic_layer_v2",
+      "contact_z": 13.8,
+      "center": [
+        149.0,
+        147.0
+      ],
+      "model": "5×5｜441点1mm连续",
+      "model_hash": "b9ae95470fdbb06716687d0081067ed3a72942ce77362988b8618af114894c27",
+      "source_plan": "Trial_000149_WITH_PRED_grid_points_z0p3_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet+Trial_000150_WITH_PRED_grid_points_z0p6_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet+Trial_000153_WITH_PRED_grid_points_z0p4_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet",
+      "rotation": -5.320517535109619,
+      "translation": [
+        1.5632453576726308,
+        0.9619817819016465
+      ],
+      "registration_source": "five_point_prediction_xy",
+      "notes": ""
+    },
+    {
+      "path": "data\\S20260920_A\\Trial_000030_WITH_PRED_compound_z1p4_dxm8_dy8_v1_h0p5_rep2_ri1_flat_d6mm_silicone_v2_magnetic_layer_v\\meta.json",
+      "session": "S20260920_A",
+      "trial_id": "000030",
+      "created": "2026-09-20T12:45:02",
+      "closed": "2026-09-20T12:46:03",
+      "status": "completed",
+      "mode": "compound",
+      "depth": 1.4,
+      "speed": 1.0,
+      "layer": "magnetic_layer_v1_5*5",
+      "layer_id": "magnetic_layer_v2",
+      "contact_z": 13.8,
+      "center": [
+        149.0,
+        147.0
+      ],
+      "model": "5×5｜441点1mm连续",
+      "model_hash": "b9ae95470fdbb06716687d0081067ed3a72942ce77362988b8618af114894c27",
+      "source_plan": "Trial_000149_WITH_PRED_grid_points_z0p3_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet+Trial_000150_WITH_PRED_grid_points_z0p6_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet+Trial_000153_WITH_PRED_grid_points_z0p4_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet",
+      "rotation": -5.320517535109619,
+      "translation": [
+        1.5632453576726308,
+        0.9619817819016465
+      ],
+      "registration_source": "five_point_prediction_xy",
+      "notes": ""
+    },
+    {
+      "path": "data\\S20260920_A\\Trial_000031_WITH_PRED_compound_z1p2_dxm8_dym8_v1_h0p5_rep2_ri1_flat_d6mm_silicone_v2_magnetic_layer_\\meta.json",
+      "session": "S20260920_A",
+      "trial_id": "000031",
+      "created": "2026-09-20T12:46:19",
+      "closed": "2026-09-20T12:47:20",
+      "status": "completed",
+      "mode": "compound",
+      "depth": 1.2,
+      "speed": 1.0,
+      "layer": "magnetic_layer_v1_5*5",
+      "layer_id": "magnetic_layer_v2",
+      "contact_z": 13.8,
+      "center": [
+        149.0,
+        147.0
+      ],
+      "model": "5×5｜441点1mm连续",
+      "model_hash": "b9ae95470fdbb06716687d0081067ed3a72942ce77362988b8618af114894c27",
+      "source_plan": "Trial_000149_WITH_PRED_grid_points_z0p3_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet+Trial_000150_WITH_PRED_grid_points_z0p6_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet+Trial_000153_WITH_PRED_grid_points_z0p4_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet",
+      "rotation": -5.320517535109619,
+      "translation": [
+        1.5632453576726308,
+        0.9619817819016465
+      ],
+      "registration_source": "five_point_prediction_xy",
+      "notes": ""
+    },
+    {
+      "path": "data\\S20260920_A\\Trial_000032_WITH_PRED_compound_z1p2_dx8_dym8_v1_h0p5_rep2_ri1_flat_d6mm_silicone_v2_magnetic_layer_v\\meta.json",
+      "session": "S20260920_A",
+      "trial_id": "000032",
+      "created": "2026-09-20T12:47:28",
+      "closed": "2026-09-20T12:48:29",
+      "status": "completed",
+      "mode": "compound",
+      "depth": 1.2,
+      "speed": 1.0,
+      "layer": "magnetic_layer_v1_5*5",
+      "layer_id": "magnetic_layer_v2",
+      "contact_z": 13.8,
+      "center": [
+        149.0,
+        147.0
+      ],
+      "model": "5×5｜441点1mm连续",
+      "model_hash": "b9ae95470fdbb06716687d0081067ed3a72942ce77362988b8618af114894c27",
+      "source_plan": "Trial_000149_WITH_PRED_grid_points_z0p3_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet+Trial_000150_WITH_PRED_grid_points_z0p6_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet+Trial_000153_WITH_PRED_grid_points_z0p4_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet",
+      "rotation": -5.320517535109619,
+      "translation": [
+        1.5632453576726308,
+        0.9619817819016465
+      ],
+      "registration_source": "five_point_prediction_xy",
+      "notes": ""
+    },
+    {
+      "path": "data\\S20260920_A\\Trial_000034_WITH_PRED_compound_z1p2_dxm10_dy10_v1_h0p5_rep2_ri1_flat_d6mm_silicone_v2_magnetic_layer\\meta.json",
+      "session": "S20260920_A",
+      "trial_id": "000034",
+      "created": "2026-09-20T12:50:03",
+      "closed": "2026-09-20T12:51:16",
+      "status": "completed",
+      "mode": "compound",
+      "depth": 1.2,
+      "speed": 1.0,
+      "layer": "magnetic_layer_v1_5*5",
+      "layer_id": "magnetic_layer_v2",
+      "contact_z": 13.8,
+      "center": [
+        149.0,
+        147.0
+      ],
+      "model": "5×5｜441点1mm连续",
+      "model_hash": "b9ae95470fdbb06716687d0081067ed3a72942ce77362988b8618af114894c27",
+      "source_plan": "Trial_000149_WITH_PRED_grid_points_z0p3_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet+Trial_000150_WITH_PRED_grid_points_z0p6_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet+Trial_000153_WITH_PRED_grid_points_z0p4_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet",
+      "rotation": -5.320517535109619,
+      "translation": [
+        1.5632453576726308,
+        0.9619817819016465
+      ],
+      "registration_source": "five_point_prediction_xy",
+      "notes": ""
+    },
+    {
+      "path": "data\\S20260920_A\\Trial_000035_WITH_PRED_compound_z1_dxm10_dy10_v1_h0p5_rep2_ri1_flat_d6mm_silicone_v2_magnetic_layer_v\\meta.json",
+      "session": "S20260920_A",
+      "trial_id": "000035",
+      "created": "2026-09-20T12:51:22",
+      "closed": "2026-09-20T12:52:35",
+      "status": "completed",
+      "mode": "compound",
+      "depth": 1.0,
+      "speed": 1.0,
+      "layer": "magnetic_layer_v1_5*5",
+      "layer_id": "magnetic_layer_v2",
+      "contact_z": 13.8,
+      "center": [
+        149.0,
+        147.0
+      ],
+      "model": "5×5｜441点1mm连续",
+      "model_hash": "b9ae95470fdbb06716687d0081067ed3a72942ce77362988b8618af114894c27",
+      "source_plan": "Trial_000149_WITH_PRED_grid_points_z0p3_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet+Trial_000150_WITH_PRED_grid_points_z0p6_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet+Trial_000153_WITH_PRED_grid_points_z0p4_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet",
+      "rotation": -5.320517535109619,
+      "translation": [
+        1.5632453576726308,
+        0.9619817819016465
+      ],
+      "registration_source": "five_point_prediction_xy",
+      "notes": ""
+    },
+    {
+      "path": "data\\S20260920_A\\Trial_000036_WITH_PRED_compound_z1_dxm6_dy6_v1_h0p5_rep2_ri1_flat_d6mm_silicone_v2_magnetic_layer_v2\\meta.json",
+      "session": "S20260920_A",
+      "trial_id": "000036",
+      "created": "2026-09-20T12:52:43",
+      "closed": "2026-09-20T12:53:32",
+      "status": "completed",
+      "mode": "compound",
+      "depth": 1.0,
+      "speed": 1.0,
+      "layer": "magnetic_layer_v1_5*5",
+      "layer_id": "magnetic_layer_v2",
+      "contact_z": 13.8,
+      "center": [
+        149.0,
+        147.0
+      ],
+      "model": "5×5｜441点1mm连续",
+      "model_hash": "b9ae95470fdbb06716687d0081067ed3a72942ce77362988b8618af114894c27",
+      "source_plan": "Trial_000149_WITH_PRED_grid_points_z0p3_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet+Trial_000150_WITH_PRED_grid_points_z0p6_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet+Trial_000153_WITH_PRED_grid_points_z0p4_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet",
+      "rotation": -5.320517535109619,
+      "translation": [
+        1.5632453576726308,
+        0.9619817819016465
+      ],
+      "registration_source": "five_point_prediction_xy",
+      "notes": ""
+    },
+    {
+      "path": "data\\S20260920_A\\Trial_000037_WITH_PRED_angle_scan_z0p6_dx8_n8_v1_h0p5_rep2_ri1_flat_d6mm_silicone_v2_magnetic_layer_v\\meta.json",
+      "session": "S20260920_A",
+      "trial_id": "000037",
+      "created": "2026-09-20T13:02:38",
+      "closed": "2026-09-20T13:07:54",
+      "status": "completed",
+      "mode": "angle_scan",
+      "depth": 0.6,
+      "speed": 1.0,
+      "layer": "magnetic_layer_v1_5*5",
+      "layer_id": "magnetic_layer_v2",
+      "contact_z": 13.8,
+      "center": [
+        149.0,
+        147.0
+      ],
+      "model": "5×5｜441点1mm连续",
+      "model_hash": "b9ae95470fdbb06716687d0081067ed3a72942ce77362988b8618af114894c27",
+      "source_plan": "Trial_000149_WITH_PRED_grid_points_z0p3_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet+Trial_000150_WITH_PRED_grid_points_z0p6_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet+Trial_000153_WITH_PRED_grid_points_z0p4_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet",
+      "rotation": -5.320517535109619,
+      "translation": [
+        1.5632453576726308,
+        0.9619817819016465
+      ],
+      "registration_source": "five_point_prediction_xy",
+      "notes": ""
+    },
+    {
+      "path": "data\\S20260920_A\\Trial_000038_WITH_PRED_circle_scan_z0p6_r4_n128_v1_h0p5_rep2_ri1_flat_d6mm_silicone_v2_magnetic_layer\\meta.json",
+      "session": "S20260920_A",
+      "trial_id": "000038",
+      "created": "2026-09-20T13:15:40",
+      "closed": "2026-09-20T13:18:13",
+      "status": "completed",
+      "mode": "circle_scan",
+      "depth": 0.6,
+      "speed": 1.0,
+      "layer": "magnetic_layer_v1_5*5",
+      "layer_id": "magnetic_layer_v2",
+      "contact_z": 13.8,
+      "center": [
+        149.0,
+        147.0
+      ],
+      "model": "5×5｜441点1mm连续",
+      "model_hash": "b9ae95470fdbb06716687d0081067ed3a72942ce77362988b8618af114894c27",
+      "source_plan": "Trial_000149_WITH_PRED_grid_points_z0p3_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet+Trial_000150_WITH_PRED_grid_points_z0p6_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet+Trial_000153_WITH_PRED_grid_points_z0p4_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet",
+      "rotation": -5.320517535109619,
+      "translation": [
+        1.5632453576726308,
+        0.9619817819016465
+      ],
+      "registration_source": "five_point_prediction_xy",
+      "notes": ""
+    },
+    {
+      "path": "data\\S20260920_A\\Trial_000039_WITH_PRED_grid_points_z0p6_hx8_hy8_st2_v1_h0p5_rep1_ri1_flat_d6mm_silicone_v2_magnetic_l\\meta.json",
+      "session": "S20260920_A",
+      "trial_id": "000039",
+      "created": "2026-09-20T13:19:43",
+      "closed": "2026-09-20T13:26:14",
+      "status": "completed",
+      "mode": "grid_points",
+      "depth": 0.6,
+      "speed": 1.0,
+      "layer": "magnetic_layer_v1_5*5",
+      "layer_id": "magnetic_layer_v2",
+      "contact_z": 13.8,
+      "center": [
+        149.0,
+        147.0
+      ],
+      "model": "5×5｜441点1mm连续",
+      "model_hash": "b9ae95470fdbb06716687d0081067ed3a72942ce77362988b8618af114894c27",
+      "source_plan": "Trial_000149_WITH_PRED_grid_points_z0p3_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet+Trial_000150_WITH_PRED_grid_points_z0p6_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet+Trial_000153_WITH_PRED_grid_points_z0p4_hx10_hy10_st1_v2_h0p5_rep1_ri0p5_flat_d6mm_silicone_v2_magnet",
+      "rotation": -5.320517535109619,
+      "translation": [
+        1.5632453576726308,
+        0.9619817819016465
+      ],
+      "registration_source": "five_point_prediction_xy",
+      "notes": ""
+    }
+  ]
+}

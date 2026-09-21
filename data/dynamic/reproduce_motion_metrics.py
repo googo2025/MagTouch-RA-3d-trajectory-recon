@@ -21,7 +21,7 @@ for row in rows:
         for name,value in values.items():
             assert np.isclose(value,m[name],atol=1e-10,rtol=0),(row['trial_id'],key,name,value,m[name])
             checks+=1
-        if row['trial_id'] in (17,18,20,26,30,31,32,36):
+        if row['trial_id'] in (17,18,20,26,28,30,31,32,34,35,36):
             print(f"Trial {row['trial_id']:03d} {key}: XYZ={values['xyz_mae']:.6f} mm, coverage={values['coverage']:.6%}")
     hs=row.get('hold_summary')
     if hs:
@@ -30,6 +30,8 @@ for row in rows:
         assert np.isclose(np.linalg.norm(e[:,:2],axis=1).mean(),hs['xy_mae'],atol=1e-10)
         assert np.isclose(np.abs(e[:,2]).mean(),hs['z_mae'],atol=1e-10)
         checks+=2
-assert len(rows)==39
-assert {r['trial_id'] for r in rows if r['disposition']=='initialization_excluded'}=={12,14}
-print(f'PASS: {checks} numerical checks; 39 records, raw data unchanged.')
+expected={4,5,17,18,19,20,26,28,30,31,32,34,35,36,37,38,39}
+assert len(rows)==17
+assert {r['trial_id'] for r in rows}==expected
+assert all(r['disposition']=='reported_in_manuscript' for r in rows)
+print(f'PASS: {checks} numerical checks; 17 manuscript-used Session III records.')

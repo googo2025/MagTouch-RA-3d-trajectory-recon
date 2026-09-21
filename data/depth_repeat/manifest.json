@@ -1,0 +1,26 @@
+{
+  "scope": "Recorded predictions, commands and events for the two central z-path records cited in Section 3.5.",
+  "interpretation": "These records share the six stated depth targets but do not establish a whole-area or cross-remount distribution.",
+  "records": [
+    {
+      "trial_id": 133,
+      "folder": "S20260919_A_Trial_133",
+      "files": {
+        "metadata.json": "fee46822ae7262e200152f3f6768bfe3e8ad492de97f07c794fbcb365a70c1e1",
+        "live_predictions.csv": "3eb7db767092834b9f9dac18a0cdd7cb135903f1dbc27d1be1ed12c9032451d7",
+        "events.csv": "c58277ff0c4eda6cdfc20b821423bb602c8a4a9694b836fcf23c74b06be23d7d",
+        "stage_commands.csv": "47b42d149a87610c0b7f8f23d630cbd132bcbee5e01e8b379281be6e5e0bd9de"
+      }
+    },
+    {
+      "trial_id": 134,
+      "folder": "S20260919_A_Trial_134",
+      "files": {
+        "metadata.json": "df08f9569a233a0806df589f7776bb38581b466eca2e14f47625eee81bfe1cf7",
+        "live_predictions.csv": "729424a6637308c06a8ab5810d5d2508c34149da48eede1644ebe7369a09cc8b",
+        "events.csv": "6d9d85bf7e6773b28821ebbdb05378a8b36609db621dd494450c57d5a6066c92",
+        "stage_commands.csv": "4759c3e98e8066d017c427a4d66a3760eac6743ba7f788b41c69da3310e78d72"
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "checks": {
+    "same_contact_keys": true,
+    "126_contacts_each": true,
+    "63_positions_each": true,
+    "same_trial_parameters": true,
+    "source_files_unchanged": true,
+    "active_trial_000202_not_read": true
+  },
+  "script_sha256": "5ffac71456c5e61fa434c2c624ff55f1571af5c079c85378cab26fc1a192c798"
+}

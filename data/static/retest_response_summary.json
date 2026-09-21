@@ -1,0 +1,27 @@
+{
+  "scope": "Matched 0.4 mm contacts at coordinates present in both Trial 153 and reserved-repeat Trial 154.",
+  "matched_coordinates": 440,
+  "trial153_missing_coordinates": [
+    [
+      -7.0,
+      3.0
+    ]
+  ],
+  "unit_response_cosine": {
+    "mean": 0.9990805265295881,
+    "median": 0.9994210041546135,
+    "p05": 0.997510098030607,
+    "p95": 0.9998033860366544
+  },
+  "relative_amplitude_change": {
+    "mean": 0.004476232722487138,
+    "median": 0.0035518634924008737,
+    "p95_absolute": 0.028035429611394887
+  },
+  "unit_response_l2_difference": {
+    "mean": 0.03859589303419777,
+    "median": 0.034029267838310936,
+    "p95": 0.07056772297800949
+  },
+  "interpretation": "Repeat-response variation only; not an independent estimate of platform positioning error."
+}

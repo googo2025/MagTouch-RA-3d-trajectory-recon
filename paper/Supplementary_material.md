@@ -13,7 +13,7 @@ SC-RBF denotes sparse-calibration continuous regression, DC-RBF dense-calibratio
 | DPL | Historical mixed pool; 2489 contacts | The same reserved Trial 154 | Discrete-node task, not a controlled training-density comparison |
 | WD-RBF cross scan | Same-source deployment using 0.4 and 0.6 mm | S20260920_A Trial 005 | Later motion record |
 | WD-Causal radial and circle | Earlier CPA static source plus nine earlier motion records | S20260920_A Trials 017, 018, 020 | New trajectory recordings |
-| Dense deployment XYZ | Historical mixed pool, 2489 contacts | S20260920_A Trials 026, 030, 032, 036 | New simultaneous XYZ motion |
+| Dense deployment XYZ | Historical mixed pool, 2489 contacts | S20260920_A Trials 026, 028, 030, 031, 032, 034, 035 and 036 | Representative simultaneous XYZ motions |
 
 Table S1. Dataset roles. Some later production models include Trial 154; they must not replace the frozen models when reproducing the independent static result.
 
@@ -33,9 +33,9 @@ For the history gate, the instantaneous activation is clipped to the interval ze
 
 ## S3 Dynamic records and selection
 
-The public dynamic export contains 39 records and their disposition, parameters, mounting calibration, segment predictions, references and validity counts. Numerical reproduction recalculates 236 scalar checks from those arrays. This verifies the recorded-output metrics; it is not a new inference run from the original magnetic streams.
+The public dynamic export contains the 17 records used in the manuscript: Trials 004, 005, 017–020, 026, 028, 030–032 and 034–039. For each released record, the package preserves the parameters, mounting calibration, segment predictions, command-derived references and validity counts used in the reported calculations. The reproduction script recalculates the saved scalar metrics from these arrays; it is not a new inference run from the original magnetic streams.
 
-Trial 001 is aborted. Trials 002, 003, 006, 007 and 008 are raw-fingerprint calibration comparison records. Trials 012 and 014 have invalid initialization and are excluded from main performance evaluation. The other 31 records remain in the audit and are interpreted according to their model and condition. Poor coverage in Trials 027, 029 and 033 is retained as an operating-boundary result, not silently attributed to initialization. These trials have approximately 62.4%, 36.5% and 50.7% coverage, predominantly due to template-similarity rejection.
+The eight simultaneous-XYZ records in Table S2 are representative demonstrations selected from completed motions and reported individually. They were not prospectively defined as an exhaustive all-direction benchmark, so no success-rate or direction-invariant generalization claim is made. Development trials, interrupted acquisitions and experiments not used in the paper are retained by the authors as research records but are outside this publication package. The package therefore documents every record used for a paper result without purporting to release the entire development archive.
 
 | Trial in S20260920_A | Condition | Planar error mm | Z MAE mm | Coverage |
 |---|---|---:|---:|---:|
@@ -43,20 +43,39 @@ Trial 001 is aborted. Trials 002, 003, 006, 007 and 008 are raw-fingerprint cali
 | 005 | WD-RBF cross, extent 6 mm | 0.510 | 0.0789 | 97.44% |
 | 017 | WD-Causal eight directions, radius 4 mm | 0.453 | 0.0556 | 100% |
 | 018 | WD-Causal circle, radius 2 mm, movement only | 0.407 | 0.0485 | 100% |
+| 019 | WD-Causal circle, radius 4 mm, movement only | 1.129 | 0.1062 | 100% |
 | 020 | WD-Causal circle, radius 4 mm, movement only | 0.772 | 0.0829 | 100% |
 | 026 | XYZ increment (−4, +4, +1.2) mm | 0.613 | 0.1012 | 100% |
+| 028 | XYZ increment (+4, −4, +1.2) mm | 0.715 | 0.0904 | 98.74% |
 | 030 | XYZ increment (−8, +8, +1.4) mm | 0.679 | 0.1134 | 100% |
+| 031 | XYZ increment (−8, −8, +1.2) mm | 0.773 | 0.0332 | 100% |
 | 032 | XYZ increment (+8, −8, +1.2) mm | 0.561 | 0.0725 | 99.91% |
+| 034 | XYZ increment (−10, +10, +1.2) mm | 0.781 | 0.1214 | 99.26% |
+| 035 | XYZ increment (−10, −10, +1.0) mm | 0.753 | 0.1136 | 100% |
 | 036 | XYZ increment (−6, +6, +1.0) mm | 0.570 | 0.1042 | 100% |
+| 037 | Later constant-depth motion record | 0.771 | 0.1294 | 88.09% |
+| 038 | Later constant-depth motion record | 0.770 | 0.0992 | 81.12% |
 | 039 | Later static 81-position grid at 0.6 mm | 0.728 | 0.1063 | 100% |
 
 Table S2. Record-level results, with static Trial 039 evaluated on final hold medians rather than motion frames. It is a later-session result and is not substituted for the reserved static result in the abstract.
 
-Trial 032 contains 550 and 541 valid samples in its two executions. Their XYZ mean errors are 0.564253 and 0.573692 mm. The saved mounting transform for Trials 026–039 is a planar rotation of −5.3205175 degrees and translation (1.5632454, 0.9619818) mm. The transform for Trials 015–025 is −10.4907044 degrees with translation (2.3352261, 0.7579724) mm. These are recorded pre-test calibration states, not transforms fitted to the test paths. Different model and calibration states mean that Trial 025 versus Trial 026 is not a clean paired algorithm ablation.
+Trial 032 contains 550 and 541 valid samples in its two executions. Their XYZ mean errors are 0.564253 and 0.573692 mm. Across the eight representative XYZ records (Trials 026, 028, 030, 031, 032, 034, 035 and 036), XYZ mean error ranges from 0.569 to 0.796 mm, output coverage ranges from 98.74% to 100%, and the median XYZ mean error is 0.710 mm. The saved mounting transform for Trials 026–039 is a planar rotation of −5.3205175 degrees and translation (1.5632454, 0.9619818) mm. The transform for Trials 015–025 is −10.4907044 degrees with translation (2.3352261, 0.7579724) mm. These are recorded pre-test calibration states, not transforms fitted to the test paths. Different model and calibration states mean that Trial 025 versus Trial 026 is not a clean paired algorithm ablation.
 
 Circular movement is generated as 128 linear segments with host waiting. Full-contact errors, including waits, are 0.3904056 and 0.7518913 mm for WD-Causal radii of 2 and 4 mm. Average complete-path speeds are approximately 0.322351 and 0.555654 mm/s. No fitted-circle correction is used to compute these absolute errors. Coverage includes eligible samples in segments that contain no valid predictions.
 
-## S4 Physical documentation and videos
+## S4 Acquisition settings, repeated response and reassembly evidence
+
+The 67 successfully decoded per-device register snapshots in this release record MLX90393 GAIN = 5, HALLCONF = 12, RES X/Y/Z = 0, DIG FILT = 0, OSR/OSR2 = 0 and temperature compensation disabled; the acquisition logs record a 400 kHz I2C clock. A further 23 device readback entries contain diagnostic status errors and are retained as such rather than interpreted as register values. The decoded snapshots supersede a legacy profile comment that mentioned gain 7. Across the 17 manuscript-used Session III records, the effective saved sample rate ranges from 37.82 to 38.59 Hz. The reserved static Trial 154 has an effective rate of 65.63 Hz.
+
+Short unloaded windows are released with the acquisition summary. Across 111 Session III windows, the median within-window channel standard deviation is 6.62 microtesla and the 95th percentile is 12.23 microtesla; the median absolute shift between successive unloaded windows is 3.48 microtesla and its 95th percentile is 11.74 microtesla. Across the 441 unloaded windows in Trial 154, the corresponding median standard deviation is 6.66 microtesla and the median shift is 3.75 microtesla. These values characterize the recorded acquisition windows, not a universal sensor noise specification.
+
+Trials 153 and 154 provide a matched same-coordinate response comparison across 440 contacts. Their median unit-response cosine similarity is 0.99942. The median response-amplitude change is +0.36%, and the 95th percentile absolute relative change is 2.80%. This is evidence of repeated magnetic-response consistency; it is not a positioning-error estimate.
+
+The metadata audit covers 398 acquisition records and detects ten layer transitions. It confirms multiple physical assembly changes, including returns to the CPA configuration at Trial 148 and S20260919_A Trials 013, 054 and 113; Trials 054 and 113 are explicitly marked as five-point reassembly records. A common registration file used by Trials 026–039 describes their shared evaluation state and must not be interpreted as evidence that only one physical disassembly occurred in the study.
+
+A controlled same-depth comparison between Trials 178 and 201 contains two repeats at 63 positions in each state. After reseating, the median response amplitude changes from 1023.9 to 326.7 microtesla, while release-completion counts change from 2/126 to 126/126. This identifies assembly state as an important experimental-domain variable. The comparison does not estimate a population distribution of remounting error. Depth-path records S20260919_A Trials 133 and 134 are also included to document the manuscript's separate depth-motion observations.
+
+## S5 Physical documentation and videos
 
 ![Figure S1](assets/magnetic_layers_and_viewing_film.png)
 
@@ -68,8 +87,8 @@ Figure S2. Existing assembled and exploded drawing of the checkerboard specimen.
 
 Video S1 shows a replay of recorded cross-scan measurements from S20260919_A Trial 035, together with the side-view camera and recorded model trajectory. Video S2 shows a replay segment of S20260920_A Trial 036, with simultaneous XYZ motion, recorded camera images and reconstructed coordinates. These are recordings of the replay interface displaying real experimental data; they are not labelled as fresh live acquisition videos. Their filenames preserve the originally supplied clips. No new experimental frames are generated.
 
-## S5 Reproducibility and remaining submission metadata
+## S6 Reproducibility and remaining submission metadata
 
-The repository separates static contact-level reproduction, dynamic recorded-output reproduction, model parameters, specimen documentation and the manuscript. The compact static export supports refitting the frozen continuous models. The dynamic export supports checking errors and coverage but does not include all raw 15-channel magnetic streams or every acquisition command needed to regenerate the entire acquisition pipeline. Original full records are retained locally.
+The repository separates static contact-level reproduction, dynamic recorded-output reproduction, acquisition evidence, reassembly evidence, model parameters, specimen documentation and the manuscript. The compact static export supports refitting the frozen continuous models. The dynamic export supports checking errors and coverage but does not include all raw 15-channel magnetic streams or every acquisition command needed to regenerate the entire acquisition pipeline. Original full records and development assets remain under the authors' control.
 
-Author names, affiliations, funding and declarations remain placeholders by request. Silicone formulation, curing conditions and hardness must be confirmed from fabrication records before submission. Journal-specific upload requirements must be checked in the submission system. No manuscript has been submitted and no repository content has been pushed as part of preparing this package.
+Author names, affiliations, funding and declarations remain placeholders by request. Silicone formulation, curing conditions and hardness must be confirmed from fabrication records before submission. Journal-specific upload requirements must be checked in the submission system.

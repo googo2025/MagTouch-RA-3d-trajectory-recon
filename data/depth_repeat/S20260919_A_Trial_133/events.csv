@@ -1,0 +1,20 @@
+﻿session_id,trial_id,t_perf_ns,t_wall_ns,event,value,source
+S20260919_A,000133,1240473214836200,1789835449399981700,TRIAL_START,z_path,recorder
+S20260919_A,000133,1240473216632800,1789835449401975600,LIVE_PREDICTION_RECORD_START,automatic_trial_recording,live_prediction
+S20260919_A,000133,1240473269479900,1789835449454803000,TRIAL_RUN,"{""index"": 1, ""count"": 1}",auto
+S20260919_A,000133,1240473269514900,1789835449454803000,AUTO_MOTION_START,z_path,printer
+S20260919_A,000133,1240473306354100,1789835449491680000,EXPERIMENT_CONFIG,"{""action"": ""z_path"", ""center_x_mm"": 149.0, ""center_y_mm"": 147.0, ""contact_z_mm"": 13.8, ""safe_lift_mm"": 3.0, ""approach_clearance_mm"": 1.0, ""indent_mm"": 1.4, ""dx_mm"": 0.0, ""dy_mm"": 8.0, ""speed_mm_s"": 2.0, ""z_speed_mm_s"": 10.0, ""hold_s"": 0.5, ""repeats"": 1, ""repeat_interval_s"": 1.0, ""z_depths_mm"": ""0.10,0.20,0.30,0.50,0.8,1.0"", ""xy_sweep_values_mm"": ""-3,-2,-1,0,1,2,3"", ""angle_count"": 8, ""circle_radius_mm"": 5.0, ""circle_points"": 48, ""grid_half_x_mm"": 8.0, ""grid_half_y_mm"": 8.0, ""grid_step_mm"": 2.0}",printer
+S20260919_A,000133,1240473306588100,1789835449491680000,SAFETY_PREFLIGHT_PASS,"{""x_min"": 149.0, ""x_max"": 149.0, ""y_min"": 147.0, ""y_max"": 147.0, ""z_min"": 12.8, ""z_max"": 16.8, ""max_depth"": 1.0, ""points_per_repeat"": 1, ""planned_contacts"": 1}",printer
+S20260919_A,000133,1240473311010300,1789835449496662400,Z_ENVELOPE,"{""contact_z_mm"": 13.8, ""z_min_planned_mm"": 12.8, ""z_max_planned_mm"": 16.8, ""action"": ""z_path""}",printer
+S20260919_A,000133,1240473842997900,1789835450028684600,ACTION_REPEAT_BEGIN,"{""action"": ""z_path"", ""repeat"": 1}",printer
+S20260919_A,000133,1240474269130400,1789835450454781500,PRE_ACTION_B0_WINDOW,"{""phase"": ""path_pre_action_b0"", ""capture_seconds"": 0.35, ""dwell_seconds"": 0.5, ""live_normalized_fit_updated"": true, ""policy"": ""confirmed lifted pose; causal samples only""}",printer
+S20260919_A,000133,1240476378686100,1789835452564344900,Z_PATH_POINT,"{""index"": 0, ""depth_mm"": 0.1}",printer
+S20260919_A,000133,1240477183141800,1789835453368723600,Z_PATH_POINT,"{""index"": 1, ""depth_mm"": 0.2}",printer
+S20260919_A,000133,1240477917010800,1789835454102648100,Z_PATH_POINT,"{""index"": 2, ""depth_mm"": 0.3}",printer
+S20260919_A,000133,1240478685314200,1789835454870982000,Z_PATH_POINT,"{""index"": 3, ""depth_mm"": 0.5}",printer
+S20260919_A,000133,1240479432931600,1789835455618501200,Z_PATH_POINT,"{""index"": 4, ""depth_mm"": 0.8}",printer
+S20260919_A,000133,1240480215946000,1789835456401510900,Z_PATH_POINT,"{""index"": 5, ""depth_mm"": 1.0}",printer
+S20260919_A,000133,1240482170324800,1789835458356030000,ACTION_REPEAT_END,1,printer
+S20260919_A,000133,1240482639231800,1789835458824549900,AUTO_MOTION_END,z_path,printer
+S20260919_A,000133,1240482896574500,1789835459081746300,LIVE_PREDICTION_RECORD_STOP,completed,live_prediction
+S20260919_A,000133,1240482896605400,1789835459081746300,TRIAL_STOP,completed,recorder
